@@ -28,12 +28,7 @@ const Header: React.FC = () => {
           </NavOption>
           <NavOption>
             <Link href="#">
-              <a>Star</a>
-            </Link>
-          </NavOption>
-          <NavOption>
-            <Link href="#">
-              <a>Políticas de Privacidade</a>
+              <a>Seja uma Star</a>
             </Link>
           </NavOption>
         </NavOptions>

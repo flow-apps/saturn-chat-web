@@ -93,7 +93,7 @@ export const PresentationsContainer = styled.main`
 
   .presentation_container {
     display: flex;
-    height: 100vh;
+    height: 85vh;
     flex: 1;
     padding: 10rem 5rem;
 
@@ -103,6 +103,7 @@ export const PresentationsContainer = styled.main`
 
     &.right_image {
       flex-direction: row-reverse;
+      background-color: ${props => props.theme.colors.shape};
     }
 
     & .image_container {
@@ -110,7 +111,7 @@ export const PresentationsContainer = styled.main`
       align-items: center;
       justify-content: center;
       width: 60%;
-      margin-right: 2rem;
+      margin: 0 2rem;
       img {
         width: 100%;
       }

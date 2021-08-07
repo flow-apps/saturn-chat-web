@@ -42,7 +42,13 @@ export default function Home() {
       </WelcomeContainer>
       <PresentationsContainer>
         <div className="presentation_container left_image">
-          <div className="image_container">{/* <Image /> */}</div>
+          <div className="image_container">
+            <Image 
+              src={require("../public/assets/community.png")}
+              alt="Imagem de uma comunidade unida"
+              quality={80}
+            />
+          </div>
           <div className="content_container">
             <h2>Crie sua comunidade e começe a interagir!</h2>
             <p>
@@ -54,7 +60,13 @@ export default function Home() {
           </div>
         </div>
         <div className="presentation_container right_image">
-          <div className="image_container">{/* <Image /> */}</div>
+          <div className="image_container">
+            <Image 
+              src={require("../public/assets/privacy.png")}
+              alt="Imagem mostrando a privacidade na internet"
+              quality={80}
+            />
+          </div>
           <div className="content_container">
             <h2>Seja encontrado, ou fique no seu cantinho privado.</h2>
             <p>
@@ -67,7 +79,13 @@ export default function Home() {
           </div>
         </div>
         <div className="presentation_container left_image">
-          <div className="image_container">{/* <Image /> */}</div>
+          <div className="image_container">
+            <Image 
+              src={require("../public/assets/boost-speed.png")}
+              alt="Imagem mostrando a velocidade do Saturn Chat"
+              quality={80}
+            />
+          </div>
           <div className="content_container">
             <h2>Rápido, fácil e seguro.</h2>
             <p>
