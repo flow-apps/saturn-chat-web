@@ -17,28 +17,30 @@ export default function Home() {
     <Container>
       <WelcomeContainer>
         <Header />
-        <WelcomeContentContainer>
-          <h1>Converse com o mundo.</h1>
-          <p>
-            No Saturn Chat você consegue se unir ao seu grupo escolar, com seus
-            amigos ou até mesmo com sua familia. Onde todos passam o tempo
-            juntos e se divertem. Sempre aproveitando todos os recursos que
-            tornam a conversa mais rápida, dinâmica e sempre mantendo sua
-            privacidade.
-          </p>
-          <div className="download_buttons_container">
-            <Link href="/">
-              <a className="download_button android">
-                <FaAndroid className="icon" /> Android
-              </a>
-            </Link>
-            <Link href="/">
-              <a className="download_button ios">
-                <FaApple className="icon" /> IOS
-              </a>
-            </Link>
-          </div>
-        </WelcomeContentContainer>
+          <WelcomeContentContainer>
+            <div className="welcome_content">
+              <h1>Converse com o mundo.</h1>
+              <p>
+                No Saturn Chat você consegue se unir ao seu grupo escolar, com seus
+                amigos ou até mesmo com sua familia. Onde todos passam o tempo
+                juntos e se divertem. Sempre aproveitando todos os recursos que
+                tornam a conversa mais rápida, dinâmica e sempre mantendo sua
+                privacidade.
+              </p>
+              <div className="download_buttons_container">
+              <Link href="/">
+                <a className="download_button android">
+                  <FaAndroid className="icon" /> Android
+                </a>
+              </Link>
+              <Link href="/">
+                <a className="download_button ios">
+                  <FaApple className="icon" /> IOS
+                </a>
+              </Link>
+            </div>
+            </div>  
+          </WelcomeContentContainer>
       </WelcomeContainer>
       <PresentationsContainer>
         <div className="presentation_container left_image">
@@ -46,7 +48,7 @@ export default function Home() {
             <Image 
               src={require("../public/assets/community.png")}
               alt="Imagem de uma comunidade unida"
-              quality={80}
+              quality={70}
             />
           </div>
           <div className="content_container">
@@ -64,7 +66,7 @@ export default function Home() {
             <Image 
               src={require("../public/assets/privacy.png")}
               alt="Imagem mostrando a privacidade na internet"
-              quality={80}
+              quality={70}
             />
           </div>
           <div className="content_container">
@@ -83,7 +85,7 @@ export default function Home() {
             <Image 
               src={require("../public/assets/boost-speed.png")}
               alt="Imagem mostrando a velocidade do Saturn Chat"
-              quality={80}
+              quality={70}
             />
           </div>
           <div className="content_container">

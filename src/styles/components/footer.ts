@@ -40,6 +40,7 @@ export const Container = styled.footer`
       a {
         font-size: 1.4rem;
         color: #999;
+        text-align: center;
 
         &:hover {
           color: #bbb;
@@ -54,5 +55,6 @@ export const Container = styled.footer`
     color: #777;
     font-size: 1.4rem;
     margin-top: 2rem;
+    text-align: center;
   }
 `;
