@@ -31,6 +31,7 @@ export const WelcomeContentContainer = styled.div`
   & .welcome_content {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     h1 {
       font-size: 5rem;

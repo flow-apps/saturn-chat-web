@@ -1,17 +1,27 @@
-import React from 'react';
-import Link from "next/link"
-import { FiInstagram, FiYoutube } from "react-icons/fi"
+import React from "react";
+import Link from "next/link";
+import { FiInstagram, FiYoutube } from "react-icons/fi";
 
-import { Container } from '../styles/components/footer';
+import { Container } from "../styles/components/footer";
 
 const Footer: React.FC = () => {
   return (
     <Container>
       <div className="social_networks_container">
-        <a href="#" className="social_network">
+        <a
+          href="https://www.instagram.com/saturn_chat/"
+          rel="external nofollow noreferrer"
+          target="_blank"
+          className="social_network"
+        >
           <FiInstagram />
         </a>
-        <a href="#" className="social_network">
+        <a
+          href="https://www.youtube.com/gamesantos"
+          rel="external nofollow noreferrer"
+          target="_blank"
+          className="social_network"
+        >
           <FiYoutube />
         </a>
       </div>
@@ -27,9 +37,11 @@ const Footer: React.FC = () => {
           </Link>
         </div>
       </div>
-      <p id="copyright">&copy; {new Date().getFullYear()} Todos os direitos reservados</p>
+      <p id="copyright">
+        &copy; {new Date().getFullYear()} Todos os direitos reservados
+      </p>
     </Container>
   );
-}
+};
 
 export default Footer;
