@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           </span>
         </IconContainer>
       </Link>
-      <OpenMenu onClick={toggleMenu}>
+      <OpenMenu aria-label="Abrir menu lateral" onClick={toggleMenu}>
         <FiMenu />
       </OpenMenu>
       <NavContainer hidden={hiddenNav}>
