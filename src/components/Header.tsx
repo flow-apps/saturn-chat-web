@@ -31,9 +31,9 @@ const Header: React.FC = () => {
             height={90}
             quality={60}
           />
-          <h1>
+          <span>
             Saturn Chat <sup>Beta</sup>
-          </h1>
+          </span>
         </IconContainer>
       </Link>
       <OpenMenu onClick={toggleMenu}>

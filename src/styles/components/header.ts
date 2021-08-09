@@ -36,9 +36,10 @@ export const IconContainer = styled.a`
     object-fit: cover;
   }
 
-  h1 {
+  span {
     font-family: Poppins, sans-serif;
     font-size: 2.5rem;
+    font-weight: bold;
     color: #fff;
     sup {
       font-family: Poppins;
