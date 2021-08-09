@@ -13,6 +13,7 @@ const Footer: React.FC = () => {
           rel="external nofollow noreferrer"
           target="_blank"
           className="social_network"
+          aria-label="Acessar Instagram do Saturn Chat"
         >
           <FiInstagram />
         </a>
@@ -21,6 +22,7 @@ const Footer: React.FC = () => {
           rel="external nofollow noreferrer"
           target="_blank"
           className="social_network"
+          aria-label="Acessar YouTube do criador do Saturn Chat"
         >
           <FiYoutube />
         </a>
