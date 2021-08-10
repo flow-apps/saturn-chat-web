@@ -60,7 +60,7 @@ export default function Home() {
           </WelcomeContentContainer>
         </WelcomeContainer>
         <PresentationsContainer>
-          <div className="presentation_container left_image">
+          <div className="presentation_container">
             <div className="image_container">
               <Image
                 src={require("../public/assets/community.png")}
@@ -78,7 +78,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="presentation_container right_image">
+          <div className="presentation_container">
             <div className="image_container">
               <Image
                 src={require("../public/assets/privacy.png")}
@@ -97,7 +97,25 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="presentation_container left_image">
+          <div className="presentation_container">
+            <div className="image_container">
+              <Image
+                src={require("../public/assets/simple-tools.svg")}
+                alt="Imagem mostrando privacidade internet"
+                quality={70}
+              />
+            </div>
+            <div className="content_container">
+              <h2>Simples para todos</h2>
+              <p>
+                No Saturn Chat, você não se sente perdido com tantos botões.
+                Temos uma interface simples, porém poderosa, para que em pouquíssimos
+                toques você já tenha um grupo totalmente configurado e prontinho
+                receber seus usuários.
+              </p>
+            </div>
+          </div>
+          <div className="presentation_container">
             <div className="image_container">
               <Image
                 src={require("../public/assets/boost-speed.png")}

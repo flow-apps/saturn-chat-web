@@ -140,11 +140,11 @@ export const PresentationsContainer = styled.main`
     flex: 1;
     padding: 10rem 5rem;
 
-    &.left_image {
+    &:nth-child(odd) {
       flex-direction: row;
     }
 
-    &.right_image {
+    &:nth-child(even) {
       flex-direction: row-reverse;
       background-color: ${props => props.theme.colors.shape};
     }
@@ -208,7 +208,6 @@ export const GetAppContainer = styled.div`
   height: 20vh;
   padding: 10rem 5rem;
 
-  background-color: ${props => props.theme.colors.shape};
 
   h3 {
     font-size: 2.5rem; 
