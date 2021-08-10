@@ -30,4 +30,8 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${props => props.theme.colors.background};
     height: 100%;
   }
+
+  :root {
+    --page-max-width: 1260px;
+  }
 `

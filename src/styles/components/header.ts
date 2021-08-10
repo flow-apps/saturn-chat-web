@@ -4,6 +4,10 @@ interface NavProps {
   hidden: boolean;
 }
 
+interface HeaderProps {
+  colorScheme?: "black" | "white"
+}
+
 const SlideHeader = keyframes`
   0% {
     opacity: 0;
@@ -16,20 +20,23 @@ const SlideHeader = keyframes`
   }
 `
 
-export const Container = styled.div`
+export const Container = styled.header`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
   width: 100%;
   padding: 0px 1.5rem;
+
+  max-width: var(--page-max-width);
 `;
 
-export const IconContainer = styled.a`
+export const IconContainer = styled.a<HeaderProps>`
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
-  margin-left: -.5rem;
+  margin-left: -1.5rem;
   img {
     width: 9rem;
     height: 9rem;
@@ -40,7 +47,7 @@ export const IconContainer = styled.a`
     font-family: Poppins, sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #fff;
+    color: ${props => props.colorScheme || "#fff"};
     sup {
       font-family: Poppins;
       font-size: 1rem;
@@ -107,14 +114,15 @@ export const NavHeader = styled.header<NavProps>`
   }
 `
 
-export const OpenMenu = styled.button`
+export const OpenMenu = styled.button<HeaderProps>`
   display: flex;
   justify-content: flex-end;
   flex: 1;
   background: transparent;
   border: none;
   font-size: 3.5rem;
-  color: #fff;
+  color: ${props => props.colorScheme || "#fff"};
+
 
   @media (min-width: 450px) {
     display: none;
@@ -135,15 +143,15 @@ export const NavOptions = styled.div<NavProps>`
   }
 `
 
-export const NavOption = styled.div`
+export const NavOption = styled.div<HeaderProps>`
   &:not(:last-child) {
-    margin-right: 2.5rem;
+    margin-right: 3.5rem;
   }
 
   a {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #fff;
+    color: ${props => props.colorScheme || "#fff"};
     text-align: center;
     line-height: 1.8rem;
 

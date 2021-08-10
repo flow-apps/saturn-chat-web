@@ -30,6 +30,7 @@ export const Container = styled.footer`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 1rem;
 
     .policie {

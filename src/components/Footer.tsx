@@ -30,12 +30,17 @@ const Footer: React.FC = () => {
       <div className="policies_container">
         <div className="policie">
           <Link href="/privacy">
-            <a>Políticas de Privacidade</a>
+            <a>Política de Privacidade</a>
           </Link>
         </div>
         <div className="policie">
           <Link href="#">
             <a>Termos de Uso</a>
+          </Link>
+        </div>
+        <div className="policie">
+          <Link href="#">
+            <a>Diretrízes da comunidade</a>
           </Link>
         </div>
       </div>

@@ -39,11 +39,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="https://fonts.googleapis.com"
           crossOrigin=""
         />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="stylesheet"

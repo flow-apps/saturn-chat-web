@@ -13,7 +13,11 @@ import {
   OpenMenu,
 } from "../styles/components/header";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  colorScheme?: "black" | "white"
+}
+
+const Header = ({ colorScheme }: HeaderProps) => {
   const [hiddenNav, setHiddenNav] = useState(true);
 
   const toggleMenu = () => {
@@ -23,7 +27,7 @@ const Header: React.FC = () => {
   return (
     <Container>
       <Link href="/" passHref>
-        <IconContainer>
+        <IconContainer colorScheme={colorScheme}>
           <Image
             src={icon}
             alt="Ícone do Saturn Chat"
@@ -36,7 +40,7 @@ const Header: React.FC = () => {
           </span>
         </IconContainer>
       </Link>
-      <OpenMenu aria-label="Abrir menu lateral" onClick={toggleMenu}>
+      <OpenMenu colorScheme={colorScheme} aria-label="Abrir menu lateral" onClick={toggleMenu}>
         <FiMenu />
       </OpenMenu>
       <NavContainer hidden={hiddenNav}>
@@ -45,12 +49,12 @@ const Header: React.FC = () => {
           <div className="hr" />
         </NavHeader>
         <NavOptions hidden={hiddenNav}>
-          <NavOption>
+          <NavOption colorScheme={colorScheme}>
             <Link href="#">
               <a>Baixar</a>
             </Link>
           </NavOption>
-          <NavOption>
+          <NavOption colorScheme={colorScheme}>
             <Link href="#">
               <a>Seja uma Star</a>
             </Link>
