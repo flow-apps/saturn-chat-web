@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={light}>
       <GlobalStyle />
       <Head>
-        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Saturn Chat" />
         <meta
