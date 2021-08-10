@@ -136,7 +136,7 @@ export default function Home() {
         </PresentationsContainer>
         <GetAppContainer>
           <h3>Que tal começar agora?</h3>
-          <Link href="#">
+          <Link href="/download">
             <a>
               <FiDownload fontSize={18} className="icon" /> Baixe agora
             </a>

@@ -2,6 +2,9 @@ import Document, {
   Html,
   DocumentContext,
   DocumentInitialProps,
+  Main,
+  NextScript,
+  Head
 } from "next/document";
 import React from "react";
 import { ServerStyleSheet } from "styled-components";
@@ -26,15 +29,27 @@ class MyDocument extends Document {
       return {
         ...initialProps,
         styles: (
-          <Html lang="pt-BR">
+          <>
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </Html>
+          </>
         ),
       };
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    return (
+      <Html lang="pt-BR">
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }
 

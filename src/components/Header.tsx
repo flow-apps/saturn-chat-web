@@ -50,7 +50,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
         </NavHeader>
         <NavOptions hidden={hiddenNav}>
           <NavOption colorScheme={colorScheme}>
-            <Link href="#">
+            <Link href="/download">
               <a>Baixar</a>
             </Link>
           </NavOption>
