@@ -39,7 +39,7 @@ export const Container = styled.footer`
       }
 
       a {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         color: #999;
         text-align: center;
 
