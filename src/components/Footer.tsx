@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="policies_container">
         <div className="policie">
-          <Link href="#">
+          <Link href="/privacy">
             <a>Políticas de Privacidade</a>
           </Link>
         </div>
