@@ -13,26 +13,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Saturn Chat" />
         <meta
-          name="description"
-          content="Saturn Chat é o melhor lugar para conversar com seus amigos, sua família e sua comunidade."
-        />
-        <meta
-          name="og:description"
-          content="Saturn Chat é o melhor lugar para conversar com seus amigos, sua família e sua comunidade."
-        />
-        <meta
           name="keywords"
-          content="saturn chat, chat online, mobile chat, voice chat, chat for gamers, chat para jogar, chat para gamers, aplicativo grátis de conversa online"
+          content="saturn chat, chat online, mobile chat, voice chat, chat for gamers, chat para jogar, chat para gamers, aplicativo grátis de conversa online, batepapo online"
         />
         <meta
           name="og:keywords"
-          content="saturn chat, chat online, mobile chat, voice chat, chat for gamers, chat para jogar, chat para gamers, aplicativo grátis de conversa online"
+          content="saturn chat, chat online, mobile chat, voice chat, chat for gamers, chat para jogar, chat para gamers, aplicativo grátis de conversa online, batepapo online"
         />
-        <meta
-          property="og:title"
-          content="Saturn Chat | O lugar certo conectar você ao mundo"
-        />
-        <title>Saturn Chat | O lugar certo conectar você ao mundo</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link
           rel="preconnect"

@@ -17,7 +17,19 @@ export default function Home() {
   return (
     <>
       <Head>
-        
+        <meta
+          property="og:title"
+          content="Saturn Chat | O lugar certo conectar você ao mundo"
+        />
+        <title>Saturn Chat | O lugar certo conectar você ao mundo</title>
+        <meta
+          name="description"
+          content="Saturn Chat é o melhor lugar para conversar com seus amigos, sua família e sua comunidade."
+        />
+        <meta
+          name="og:description"
+          content="Saturn Chat é o melhor lugar para conversar com seus amigos, sua família e sua comunidade."
+        />
       </Head>
       <Container>
         <WelcomeContainer>
