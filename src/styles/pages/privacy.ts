@@ -15,6 +15,10 @@ export const PrivacyContainer = styled.main`
   max-width: var(--page-max-width);
   margin: 3rem auto;
 
+  @media (max-width: 450px) {
+    width: 100%;
+  }
+
   padding: 0 1rem;
 
   h1, h2, h3, h4 {
