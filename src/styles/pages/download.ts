@@ -11,6 +11,7 @@ export const PresentationContainer = styled.header`
   background-color: #292929;
   display: flex;
   flex-direction: column;
+  text-align: center;
 
   & .content {
     display: flex;
@@ -18,12 +19,13 @@ export const PresentationContainer = styled.header`
     align-items: center;
     justify-content: center;
     flex: 1;
-    padding: 1.5rem;
+    padding: 2rem;
+    max-width: var(--page-max-width);
+    margin: 0 auto;
 
     h1 {
       font-size: 4rem;
       color: #fff;
-      margin-bottom: 1rem;
     }
 
     p {
@@ -37,11 +39,13 @@ export const PresentationContainer = styled.header`
       a {
         display: flex;
         align-items: center;
+        justify-content: center;
         background-color: ${props => props.theme.colors.primary};
-        padding: 1.5rem 3rem;
+        padding: 2rem;
         font-size: 1.8rem;
         color: #fff;
         border-radius: 30px;
+        width: 320px;
 
         & #icon {
           font-size: 2.2rem;
@@ -49,13 +53,41 @@ export const PresentationContainer = styled.header`
           margin-bottom: .4rem;
         }
 
+        
         :hover {
           background-color: ${props => props.theme.colors.light_primary};
           transition: 200ms;
         }
       }
+
+      span#not_supported {
+        font-size: 1.6rem;
+        color: ${({ theme }) => theme.colors.secondary};
+      }
+
+      span#soon {
+        background-color: #c0c0c0;
+        color: #444;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        border-radius: 30px;
+        width: 320px;
+      }
     }
   }
+
+  @media (max-width: 430px) {
+    height: 85vh;
+
+    & .content {
+      h1 {
+        font-size: 2.4rem;
+      }
+    p {
+      
+    }
+  };
+}
 `
 
 export const DownloadsContainer = styled.main`
@@ -67,14 +99,13 @@ export const DownloadsContainer = styled.main`
   .downloads {
     display: flex;
     justify-content: space-around;
-    padding: 3rem;
-    flex-wrap: wrap;
+    padding: 2rem;
     max-width: var(--page-max-width);
     margin: 0 auto;
 
     .download_card {
       width: 100%;
-      max-width: 320px;
+      max-width: 400px;
       background-color: ${props => props.theme.colors.shape};
       padding: 1.5rem;
       border: 1px solid ${props => props.theme.colors.secondary};
@@ -115,7 +146,33 @@ export const DownloadsContainer = styled.main`
             transition: 200ms;
           }
         }
+
+        span#soon {
+          font-size: 1.8rem;
+          background-color: #c0c0c0;
+          color: #444;
+          padding: 1.5rem 3rem;
+          border-radius: 30px;
+        }
       }
+    }
+  }
+
+  @media (max-width: 680px) {
+    .downloads {
+      flex-direction: column;
+      align-items: center;
+      .download_card {
+
+      } 
+    }
+  }
+
+  @media (max-width: 430px) {
+    .downloads {
+      .download_card {
+
+      } 
     }
   }
 `

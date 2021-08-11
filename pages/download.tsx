@@ -6,22 +6,12 @@ import Image from "next/image"
 
 import { FiDownload } from "react-icons/fi"
 import { Container, DownloadsContainer, PresentationContainer } from "../src/styles/pages/download";
+import { isAndroid, isIOS } from "react-device-detect";
 
 const Download: React.FC = () => {
-  const [platform, setPlatform] = useState("");
-
-  useEffect(() => {
-    setPlatform(navigator.platform.toLowerCase());
-  }, []);
-
+  
   const getDownloadButton = () => {
-    const appleIncludes =
-      platform.includes("iphone") || platform.includes("ipad");
-
-    const androidIncludes =
-      platform.includes("android") || platform.includes("linux") || platform.includes("null")
-
-    if (androidIncludes) {
+    if (isAndroid) {
       return (
         <a
           href="http://"
@@ -34,20 +24,23 @@ const Download: React.FC = () => {
       );
     }
 
-    if (appleIncludes) {
+    if (isIOS) {
       return (
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          id="download_button"
-        >
-          Baixar na App Store
-        </a>
+        // <a
+        //   href="http://"
+        //   target="_blank"
+        //   rel="noopener noreferrer"
+        //   id="download_button"
+        // >
+        //   <FiDownload id="icon" /> Baixar na App Store
+        // </a>
+        <span id="soon">
+          Em breve no seu dispositivo
+        </span>
       );
     }
 
-    return <></>;
+    return <span id="not_supported">No momento, o aplicativo não é suportado nesse aparelho. Veja as plataformas suportadas abaixo.</span>
   };
 
   return (
@@ -112,9 +105,12 @@ const Download: React.FC = () => {
                 />
               </div>
               <div className="get_container">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                {/* <a href="http://" target="_blank" rel="noopener noreferrer">
                   Eu quero esse
-                </a>
+                </a> */}
+                <span id="soon">
+                  Em breve
+                </span>
               </div>
             </div>
           </div>
