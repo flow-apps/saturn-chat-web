@@ -42,7 +42,7 @@ export default function Home() {
                 seus amigos ou até mesmo com sua família. Onde todos passam o
                 tempo juntos e se divertem. Sempre aproveitando todos os
                 recursos que tornam a conversa mais rápida, dinâmica e sempre
-                mantendo sua privacidade.
+                mantendo sua privacidade. Que tal começar sua jornada agora?
               </p>
               <div className="download_buttons_container">
                 <Link href="/">
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="image_container">
               <Image
                 src={require("../public/assets/community.png")}
-                alt="Imagem de uma comunidade unida"
+                alt="Imagem comunidade unida"
                 quality={70}
               />
             </div>
@@ -82,7 +82,7 @@ export default function Home() {
             <div className="image_container">
               <Image
                 src={require("../public/assets/privacy.png")}
-                alt="Imagem mostrando a privacidade na internet"
+                alt="Imagem mostrando privacidade internet"
                 quality={70}
               />
             </div>
@@ -101,7 +101,7 @@ export default function Home() {
             <div className="image_container">
               <Image
                 src={require("../public/assets/simple-tools.svg")}
-                alt="Imagem mostrando privacidade internet"
+                alt="Imagem mostrando ferramentas Saturn Chat"
                 quality={70}
               />
             </div>

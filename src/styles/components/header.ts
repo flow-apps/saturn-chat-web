@@ -154,7 +154,10 @@ export const NavOption = styled.div<HeaderProps>`
     color: ${props => props.colorScheme || "#fff"};
     text-align: center;
     line-height: 1.8rem;
+  }
 
+  :hover {
+    text-decoration: underline;
   }
 
   @media (max-width: 450px) {

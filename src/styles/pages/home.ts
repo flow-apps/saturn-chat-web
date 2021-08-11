@@ -9,11 +9,8 @@ export const WelcomeContainer = styled.header`
   display: flex;
   flex-direction: column;
   height: 95vh;
-  background: linear-gradient(
-    45deg,
-    rgba(0, 136, 255, 1) 33%,
-    rgba(0, 94, 176, 1) 100%
-  );
+  background: url("/assets/background.jpg") no-repeat #181d3b;
+  background-size: cover;
 
   @media (max-width: 460px) {
     height: 75vh;
@@ -100,9 +97,9 @@ export const WelcomeContentContainer = styled.div`
       }
 
       &.android {
-        background-color: #3ddc84;
+        background-color: #3cca62;
         &:hover {
-          background-color: #3dda73;
+          background-color:  #3ddc84;
         }
       }
 
