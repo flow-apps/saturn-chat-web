@@ -55,8 +55,8 @@ const Header = ({ colorScheme }: HeaderProps) => {
             </Link>
           </NavOption>
           <NavOption colorScheme={colorScheme}>
-            <Link href="#">
-              <a>Seja uma Star</a>
+            <Link href="/star">
+              <a>Seja Star</a>
             </Link>
           </NavOption>
         </NavOptions>

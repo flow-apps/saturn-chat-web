@@ -12,6 +12,7 @@ import {
 import { FaApple, FaAndroid } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import Footer from "../src/components/Footer";
+import { randInt } from "../src/utils/random";
 
 export default function Home() {
   return (
@@ -73,8 +74,8 @@ export default function Home() {
               <p>
                 Os grupos do Saturn Chat são preparados para receber quantas
                 pessoas você precisar. Com poucos toques você já cria seu grupo
-                e já pode convidar toda sua comunidade queira, através de
-                convites personalizáveis.
+                e já pode convidar toda sua comunidade, através de convites
+                personalizáveis e totalmente controláveis por você.
               </p>
             </div>
           </div>
@@ -90,10 +91,10 @@ export default function Home() {
               <h2>Seja encontrado, ou fique no seu cantinho privado.</h2>
               <p>
                 Você pode escolher entre criar grupos públicos, onde você pode
-                ser encontrado nas buscas no Saturn Chat e qualquer pessoa pode
-                entrar. Você também pode criar grupos privados, que não podem
-                ser encontrados e onde só podem entrar pessoas que tiverem seu
-                convite.
+                ser encontrado nas buscas no Saturn Chat (incluindo as buscas do
+                Google também!) e qualquer pessoa pode entrar. Você também pode
+                criar grupos privados, que não podem ser encontrados e onde só
+                podem entrar pessoas que tiverem seu convite.
               </p>
             </div>
           </div>
@@ -106,12 +107,13 @@ export default function Home() {
               />
             </div>
             <div className="content_container">
-              <h2>Simples para todos</h2>
+              <h2>Simples para todos.</h2>
               <p>
                 No Saturn Chat, você não se sente perdido com tantos botões.
-                Temos uma interface simples, porém poderosa, para que em pouquíssimos
-                toques você já tenha um grupo totalmente configurado e prontinho
-                receber seus usuários.
+                Temos uma interface simples, porém poderosa, para que em
+                pouquíssimos toques você já tenha um grupo totalmente
+                configurado e prontinho receber seus usuários com muito conforto
+                e segurança.
               </p>
             </div>
           </div>

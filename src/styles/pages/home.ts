@@ -1,11 +1,17 @@
 import styled from "styled-components";
 
+interface AnimationProps {
+  size: number;
+  opacity: number;
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
 export const WelcomeContainer = styled.header`
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 95vh;
@@ -26,6 +32,7 @@ export const WelcomeContentContainer = styled.div`
   justify-content: center;
 
   & .welcome_content {
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
