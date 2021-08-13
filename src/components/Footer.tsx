@@ -35,11 +35,6 @@ const Footer: React.FC = () => {
         </div>
         <div className="policie">
           <Link href="#">
-            <a>Termos de Uso</a>
-          </Link>
-        </div>
-        <div className="policie">
-          <Link href="#">
             <a>Diretrízes da comunidade</a>
           </Link>
         </div>
