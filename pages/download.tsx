@@ -11,7 +11,7 @@ import { isAndroid, isIOS } from "react-device-detect";
 const Download: React.FC = () => {
   
   const getDownloadButton = () => {
-    if (isAndroid) {
+    if (!isAndroid) {
       return (
         <a
           href="http://"
@@ -64,14 +64,23 @@ const Download: React.FC = () => {
         <PresentationContainer>
           <Header colorScheme="white" />
           <div className="content">
-            <h1>Escolha seu dispositivo e comece agora a diversão.</h1>
-            <p>
-              Uma grande jornada te aguarda. Para isso, basta baixar o Saturn
-              Chat em seu dispositivo.
-            </p>
-            <div className="download_button_container">
-              {getDownloadButton()}
+            <div id="content_wrapper">
+              <h1>Escolha seu dispositivo e comece agora a diversão.</h1>
+              <p>
+                Uma grande jornada te aguarda. Para isso, basta baixar o Saturn
+                Chat em seu dispositivo.
+              </p>
+              <div className="download_button_container">
+                {getDownloadButton()}
+              </div>
             </div>
+            <div id="image_wrapper">
+              <Image 
+                src={require("../public/assets/download-mobile.svg")}
+                alt="Image mulher olhando celular fazendo download"
+                quality={70}
+              />
+          </div>
           </div>
         </PresentationContainer>
         <DownloadsContainer>

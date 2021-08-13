@@ -30,12 +30,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
         />
-
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-        />
       </Head>
       <Component {...pageProps} />
     </ThemeProvider>

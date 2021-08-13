@@ -7,33 +7,32 @@ export const Container = styled.div`
 `;
 
 export const PresentationContainer = styled.header`
-  height: 95vh;
+  min-height: 95vh;
   background-color: #292929;
   display: flex;
   flex-direction: column;
-  text-align: center;
 
   & .content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex: 1;
-    padding: 2rem;
+    justify-content: space-around;
+    padding: 2rem 5rem;
     max-width: var(--page-max-width);
-    margin: 0 auto;
+    margin: auto;
 
     h1 {
-      font-size: 4rem;
-      color: #fff;
+      font-size: 3.5rem;
+      color: ${props => props.theme.colors.secondary};
     }
 
     p {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #fff;
+      margin: 1.5rem 0;
     }
 
     & .download_button_container {
+      display: flex;
       margin: 0 auto;
       margin-top: 2.5rem;
       a {
@@ -42,10 +41,10 @@ export const PresentationContainer = styled.header`
         justify-content: center;
         background-color: ${props => props.theme.colors.primary};
         padding: 2rem;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         color: #fff;
-        border-radius: 30px;
-        width: 320px;
+        border-radius: 60px;
+        width: 30rem;
 
         & #icon {
           font-size: 2.2rem;
@@ -62,7 +61,7 @@ export const PresentationContainer = styled.header`
 
       span#not_supported {
         font-size: 1.6rem;
-        color: ${({ theme }) => theme.colors.secondary};
+        color: ${({ theme }) => theme.colors.primary};
       }
 
       span#soon {
@@ -72,6 +71,37 @@ export const PresentationContainer = styled.header`
         font-size: 1.6rem;
         border-radius: 30px;
         width: 320px;
+      }
+    }
+
+    #image_wrapper {
+      width: 70%;
+      margin-left: 1rem;
+      img {
+        object-fit: cover;
+      }
+    }
+
+    @media (max-width: 780px) {
+      flex-direction: column-reverse;
+      text-align: center;
+
+      padding: 3rem;
+
+      #content_wrapper {
+        margin-top: 1.5rem;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.8rem;
+        }
+      }
+
+      .download_button_container {
+        justify-content: center;
       }
     }
   }
