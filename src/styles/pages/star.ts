@@ -93,14 +93,13 @@ export const PresentationContainer = styled.header`
 export const BenefitsContainer = styled.main`
   display: flex;
   flex-direction: column;
-  flex: 1;
-  margin: 6rem 0;
+  margin: 6rem auto;
   max-width: 1400px;
+  padding: 0 1rem;
 
   .content {
     text-align: center;
     padding: 2rem 5rem;
-    margin: 1rem;
 
     h2 {
       font-size: 3rem;
@@ -119,8 +118,8 @@ export const BenefitsContainer = styled.main`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 0 5rem;
     gap: 1.5rem;
+    margin: 1rem 0;
 
     .benefit_card {
       display: flex;
@@ -170,7 +169,7 @@ export const BenefitsContainer = styled.main`
       }
 
       &:nth-child(5) {
-        background: linear-gradient(160deg, #d7741d, #b60b44);
+        background: linear-gradient(160deg, #b60b44, #d7741d);
       }
 
       &:nth-child(6) {
@@ -187,3 +186,48 @@ export const BenefitsContainer = styled.main`
     }
   }
 `;
+
+export const DownloadContainer = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 7rem;
+  background-color: ${props => props.theme.colors.shape};
+
+  h3 {
+    font-size: 2.5rem;
+    max-width: var(--page-max-width);
+
+    @media (max-width: 780px) {
+      font-size: 1.9rem;
+    }
+
+    @media (max-width: 520px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    background-color: ${props => props.theme.colors.primary};
+    color: #fff;
+    text-align: center;
+    border-radius: 35px;
+    box-shadow: 1px 1px 5px 1px #00000055;
+    margin-top: 1rem;
+    max-width: var(--page-max-width);
+
+    &:hover {
+      background-color: ${props => props.theme.colors.light_primary};
+      transition: 200ms;
+      box-shadow: none;
+    }
+  }
+`

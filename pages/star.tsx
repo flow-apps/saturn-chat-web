@@ -5,10 +5,12 @@ import Image from "next/image";
 import {
   BenefitsContainer,
   Container,
+  DownloadContainer,
   PresentationContainer,
 } from "../src/styles/pages/star";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
+import Link from "next/link";
 
 const Star: React.FC = () => {
   return (
@@ -137,6 +139,17 @@ const Star: React.FC = () => {
             </div>
           </div>
         </BenefitsContainer>
+        <DownloadContainer>
+          <h3>
+            Gostou dos recursos? Então apoie o desenvolvimento do Saturn Chat e
+            ganhe todos esses recursos e muito mais!
+          </h3>
+          <Link href="/download" passHref>
+            <a>
+              Baixar e tornar-se Star
+            </a>
+          </Link>
+        </DownloadContainer>
         <Footer />
       </Container>
     </>

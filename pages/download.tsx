@@ -11,7 +11,7 @@ import { isAndroid, isIOS } from "react-device-detect";
 const Download: React.FC = () => {
   
   const getDownloadButton = () => {
-    if (!isAndroid) {
+    if (isAndroid) {
       return (
         <a
           href="http://"

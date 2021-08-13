@@ -3,7 +3,10 @@
   "plugins": [
     ["babel-plugin-styled-components", {
       "pure": true,
-      "ssr": true
+      "ssr": true,
+      "minify": true,
+      "transpileTemplateLiterals": true,
+      "namespace": "saturn-chat"
     }]
   ]
 }
