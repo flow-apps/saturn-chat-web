@@ -136,13 +136,12 @@ export const DownloadsContainer = styled.main`
     .download_card {
       width: 100%;
       max-width: 400px;
-      background-color: ${props => props.theme.colors.shape};
+      background-color: ${props => props.theme.colors.shape}99;
       padding: 1.5rem;
-      border: 1px solid ${props => props.theme.colors.secondary};
 
       margin: 1.5rem;
 
-      border-radius: 15px;
+      border-radius: 8px;
 
       .title_container {
         h2 {
