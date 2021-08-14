@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           </Link>
         </div>
         <div className="policie">
-          <Link href="#">
+          <Link href="/guidelines">
             <a>Diretrízes da comunidade</a>
           </Link>
         </div>
