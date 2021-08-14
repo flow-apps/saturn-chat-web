@@ -101,6 +101,7 @@ export const BenefitsContainer = styled.main`
     text-align: center;
     padding: 2rem 5rem;
 
+
     h2 {
       font-size: 3rem;
       color: ${(props) => props.theme.colors.dark_heading};
@@ -124,11 +125,10 @@ export const BenefitsContainer = styled.main`
     .benefit_card {
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
       width: 100%;
       min-width: 300px;
       max-width: 400px;
-      height: 30rem;
+      height: 40rem;
       color: #fff;
       text-align: center;
 
@@ -138,6 +138,7 @@ export const BenefitsContainer = styled.main`
       .benefit_title {
         h3 {
           font-size: 1.8rem;
+          height: 6rem;
         }
       }
 
@@ -145,7 +146,23 @@ export const BenefitsContainer = styled.main`
         p {
           font-size: 1.4rem;
           font-weight: lighter;
-          margin-top: 1.2rem;
+        }
+      }
+
+      .benefit_image {
+        display: flex;
+        align-self: center;
+        justify-self: flex-end;
+        width: 80%;
+        padding: 3rem;
+        margin: auto;
+
+        @media (max-width: 1030px) {
+          width: 65%;
+          padding: 5rem;
+        }
+        img {
+          object-fit: cover;
         }
       }
 
