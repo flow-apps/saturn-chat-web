@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FiInstagram, FiYoutube } from "react-icons/fi";
 
-import { Container } from "../styles/components/footer";
+import { Container } from "@styles/components/footer";
 
 const Footer: React.FC = () => {
   return (

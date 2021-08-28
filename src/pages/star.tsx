@@ -7,9 +7,9 @@ import {
   Container,
   DownloadContainer,
   PresentationContainer,
-} from "../styles/pages/star";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+} from "@styles/pages/star";
+import Header from "@component/Header";
+import Footer from "@component/Footer";
 import Link from "next/link";
 
 const Star: React.FC = () => {

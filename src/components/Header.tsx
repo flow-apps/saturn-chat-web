@@ -11,7 +11,7 @@ import {
   NavOption,
   NavOptions,
   OpenMenu,
-} from "../styles/components/header";
+} from "@styles/components/header";
 
 interface HeaderProps {
   colorScheme?: "black" | "white"

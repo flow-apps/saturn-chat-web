@@ -1,11 +1,11 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Header from "@component/Header";
+import Footer from "@component/Footer";
 import Image from "next/image"
 
 import { FiDownload } from "react-icons/fi"
-import { Container, DownloadsContainer, PresentationContainer } from "../styles/pages/download";
+import { Container, DownloadsContainer, PresentationContainer } from "@styles/pages/download";
 import { isAndroid, isIOS } from "react-device-detect";
 
 const Download: React.FC = () => {

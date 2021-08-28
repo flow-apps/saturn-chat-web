@@ -1,17 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import Header from "../components/Header";
+import Header from "@component/Header";
+import Footer from "@component/Footer";
 import {
   Container,
   GetAppContainer,
   PresentationsContainer,
   WelcomeContainer,
   WelcomeContentContainer,
-} from "../styles/pages/home";
+} from "@styles/pages/home";
 import { FaApple, FaAndroid } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
-import Footer from "../components/Footer";
 import { randInt } from "../utils/random";
 
 export default function Home() {
