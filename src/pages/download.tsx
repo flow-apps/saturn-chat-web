@@ -1,11 +1,11 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
-import Footer from "../src/components/Footer";
-import Header from "../src/components/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import Image from "next/image"
 
 import { FiDownload } from "react-icons/fi"
-import { Container, DownloadsContainer, PresentationContainer } from "../src/styles/pages/download";
+import { Container, DownloadsContainer, PresentationContainer } from "../styles/pages/download";
 import { isAndroid, isIOS } from "react-device-detect";
 
 const Download: React.FC = () => {
@@ -76,7 +76,7 @@ const Download: React.FC = () => {
             </div>
             <div id="image_wrapper">
               <Image 
-                src={require("../public/assets/download-mobile.svg")}
+                src={require("../../public/assets/download-mobile.svg")}
                 alt="Image mulher olhando celular fazendo download"
                 quality={70}
               />
@@ -91,7 +91,7 @@ const Download: React.FC = () => {
               </div>
               <div className="image_container">
                 <Image 
-                  src={require("../public/assets/app-android.png")}
+                  src={require("../../public/assets/app-android.png")}
                   alt="Baixar Saturn Chat android"
                   quality={80}
                 />
@@ -108,7 +108,7 @@ const Download: React.FC = () => {
               </div>
               <div className="image_container">
                 <Image 
-                  src={require("../public/assets/app-ios.png")}
+                  src={require("../../public/assets/app-ios.png")}
                   alt="Baixar Saturn Chat IOS"
                   quality={80}
                 />

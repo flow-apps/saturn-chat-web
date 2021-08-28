@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import Footer from "../src/components/Footer";
-import { Container, PrivacyContainer } from "../src/styles/pages/privacy";
-import Header from "../src/components/Header";
+import Footer from "../components/Footer";
+import { Container, PrivacyContainer } from "../styles/pages/privacy";
+import Header from "../components/Header";
 
 const Privacy: React.FC = () => {
   return (

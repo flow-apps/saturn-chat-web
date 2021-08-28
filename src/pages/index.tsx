@@ -1,18 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import Header from "../src/components/Header";
+import Header from "../components/Header";
 import {
   Container,
   GetAppContainer,
   PresentationsContainer,
   WelcomeContainer,
   WelcomeContentContainer,
-} from "../src/styles/pages/home";
+} from "../styles/pages/home";
 import { FaApple, FaAndroid } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
-import Footer from "../src/components/Footer";
-import { randInt } from "../src/utils/random";
+import Footer from "../components/Footer";
+import { randInt } from "../utils/random";
 
 export default function Home() {
   return (
@@ -64,7 +64,7 @@ export default function Home() {
           <div className="presentation_container">
             <div className="image_container">
               <Image
-                src={require("../public/assets/community.png")}
+                src={require("../../public/assets/community.png")}
                 alt="Imagem comunidade unida"
                 quality={70}
               />
@@ -82,7 +82,7 @@ export default function Home() {
           <div className="presentation_container">
             <div className="image_container">
               <Image
-                src={require("../public/assets/privacy.png")}
+                src={require("../../public/assets/privacy.png")}
                 alt="Imagem mostrando privacidade internet"
                 quality={70}
               />
@@ -101,7 +101,7 @@ export default function Home() {
           <div className="presentation_container">
             <div className="image_container">
               <Image
-                src={require("../public/assets/simple-tools.svg")}
+                src={require("../../public/assets/simple-tools.svg")}
                 alt="Imagem mostrando ferramentas Saturn Chat"
                 quality={70}
               />
@@ -120,7 +120,7 @@ export default function Home() {
           <div className="presentation_container">
             <div className="image_container">
               <Image
-                src={require("../public/assets/boost-speed.png")}
+                src={require("../../public/assets/boost-speed.png")}
                 alt="Imagem mostrando a velocidade do Saturn Chat"
                 quality={70}
               />
