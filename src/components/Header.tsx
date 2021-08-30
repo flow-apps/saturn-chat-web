@@ -3,15 +3,10 @@ import icon from '../../public/assets/icon.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiMenu, FiArrowLeft } from 'react-icons/fi';
-import {
-    Container,
-    IconContainer,
-    NavContainer,
-    NavHeader,
-    NavOption,
-    NavOptions,
-    OpenMenu,
-} from '@styles/components/header';
+import { ImSwitch } from 'react-icons/im';
+import { Container, IconContainer, NavContainer, NavHeader, NavOption, NavOptions, OpenMenu } from '@styles/components/header';
+import { useTheme } from 'styled-components';
+import { useChooseTheme } from 'src/hooks/useTheme';
 
 interface HeaderProps {
     colorScheme?: 'black' | 'white';
@@ -19,6 +14,9 @@ interface HeaderProps {
 
 const Header = ({ colorScheme }: HeaderProps) => {
     const [hiddenNav, setHiddenNav] = useState(true);
+
+    const theme = useTheme();
+    const { changeTheme } = useChooseTheme();
 
     const NavBarOptions = [
         {
@@ -39,23 +37,13 @@ const Header = ({ colorScheme }: HeaderProps) => {
         <Container>
             <Link href="/" passHref>
                 <IconContainer colorScheme={colorScheme}>
-                    <Image
-                        src={icon}
-                        alt="Ícone do Saturn Chat"
-                        width={90}
-                        height={90}
-                        quality={60}
-                    />
+                    <Image src={icon} alt="Ícone do Saturn Chat" width={90} height={90} quality={60} />
                     <span>
                         Saturn Chat <sup>Beta</sup>
                     </span>
                 </IconContainer>
             </Link>
-            <OpenMenu
-                colorScheme={colorScheme}
-                aria-label="Abrir menu lateral"
-                onClick={toggleMenu}
-            >
+            <OpenMenu colorScheme={colorScheme} aria-label="Abrir menu lateral" onClick={toggleMenu}>
                 <FiMenu />
             </OpenMenu>
             <NavContainer hidden={hiddenNav}>
@@ -67,6 +55,12 @@ const Header = ({ colorScheme }: HeaderProps) => {
                 </NavHeader>
 
                 <NavOptions hidden={hiddenNav}>
+                    <NavOption colorScheme={colorScheme}>
+                        <a onClick={changeTheme}>
+                            <ImSwitch style={{ cursor: 'pointer', fontSize: 18, color: theme.colors.dark_heading }} />
+                        </a>
+                    </NavOption>
+
                     {NavBarOptions.map(({ path, text }, key) => {
                         return (
                             <NavOption key={key} colorScheme={colorScheme}>

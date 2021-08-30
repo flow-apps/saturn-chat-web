@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { FiInstagram, FiYoutube } from 'react-icons/fi';
 
 import { Container } from '@styles/components/footer';
+import { useChooseTheme } from 'src/hooks/useTheme';
 
 const Footer: React.FC = () => {
     const SocialNetworks = [
@@ -34,14 +35,7 @@ const Footer: React.FC = () => {
             <div className="social_networks_container">
                 {SocialNetworks.map(({ Path, Text, Icon }, key) => {
                     return (
-                        <a
-                            key={key}
-                            href={Path}
-                            rel="external nofollow noreferrer"
-                            target="_blank"
-                            className="social_network"
-                            aria-label={Text}
-                        >
+                        <a key={key} href={Path} rel="external nofollow noreferrer" target="_blank" className="social_network" aria-label={Text}>
                             <Icon />
                         </a>
                     );
@@ -58,9 +52,7 @@ const Footer: React.FC = () => {
                     );
                 })}
             </div>
-            <p id="copyright">
-                &copy; {new Date().getFullYear()} Todos os direitos reservados
-            </p>
+            <p id="copyright">&copy; {new Date().getFullYear()} Todos os direitos reservados</p>
         </Container>
     );
 };
