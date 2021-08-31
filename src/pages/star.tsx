@@ -7,9 +7,9 @@ import {
   Container,
   DownloadContainer,
   PresentationContainer,
-} from "../src/styles/pages/star";
-import Header from "../src/components/Header";
-import Footer from "../src/components/Footer";
+} from "@styles/pages/star";
+import Header from "@component/Header";
+import Footer from "@component/Footer";
 import Link from "next/link";
 
 const Star: React.FC = () => {
@@ -55,7 +55,7 @@ const Star: React.FC = () => {
             </div>
             <div id="image_container">
               <Image
-                src={require("../public/assets/upgrade-to-star.svg")}
+                src={require("../../public/assets/upgrade-to-star.svg")}
                 alt="Evolua para plano star"
                 quality={70}
               />
@@ -83,7 +83,7 @@ const Star: React.FC = () => {
               </div>
               <div className="benefit_image">
                 <Image 
-                  src={require("../public/assets/remove-ads.png")}
+                  src={require("../../public/assets/remove-ads.png")}
                   alt="Remova anúncios Saturn Chat"
                   quality={70}
                 />
@@ -98,7 +98,7 @@ const Star: React.FC = () => {
               </div>
               <div className="benefit_image">
                 <Image 
-                  src={require("../public/assets/upload-more.png")}
+                  src={require("../../public/assets/upload-more.png")}
                   alt="Aumentando espaço upload 120MB"
                   quality={70}
                 />
@@ -125,7 +125,7 @@ const Star: React.FC = () => {
               </div>
               <div className="benefit_image">
                 <Image 
-                  src={require("../public/assets/more-participants.png")}
+                  src={require("../../public/assets/more-participants.png")}
                   alt="Mais participantes nos grupos"
                   quality={70}
                 />
@@ -143,7 +143,7 @@ const Star: React.FC = () => {
               </div>
               <div className="benefit_image">
                 <Image 
-                  src={require("../public/assets/name-icon.png")}
+                  src={require("../../public/assets/name-icon.png")}
                   alt="Emblema de uma estrela ao lado do seu nome"
                   quality={70}
                 />
@@ -161,7 +161,7 @@ const Star: React.FC = () => {
               </div>
               <div className="benefit_image">
                 <Image 
-                  src={require("../public/assets/help-dev.png")}
+                  src={require("../../public/assets/help-dev.png")}
                   alt="Imagem ajudando desenvolvimento Saturn Chat"
                   quality={70}
                 />

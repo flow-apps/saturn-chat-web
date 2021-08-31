@@ -1,9 +1,9 @@
 import Head from "next/head";
 import React from "react";
-import Footer from "../src/components/Footer";
-import Header from "../src/components/Header";
+import Header from "@component/Header";
+import Footer from "@component/Footer";
 
-import { Container, GuideContainer } from "../src/styles/pages/guidelines";
+import { Container, GuideContainer } from "@styles/pages/guidelines";
 
 const pages: React.FC = () => {
   return (
