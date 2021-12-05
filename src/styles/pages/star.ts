@@ -125,10 +125,12 @@ export const BenefitsContainer = styled.main`
     .benefit_card {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       min-width: 300px;
       max-width: 400px;
-      height: 40rem;
+      height: 20rem;
       color: #fff;
       text-align: center;
 

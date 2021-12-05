@@ -81,13 +81,6 @@ const Star: React.FC = () => {
                   todas.
                 </p>
               </div>
-              <div className="benefit_image">
-                <Image 
-                  src={require("../../public/assets/remove-ads.png")}
-                  alt="Remova anúncios Saturn Chat"
-                  quality={70}
-                />
-              </div>
             </div>
             <div className="benefit_card">
               <div className="benefit_title">
@@ -95,13 +88,6 @@ const Star: React.FC = () => {
               </div>
               <div className="benefit_description">
                 <p>Aumente em 10x o espaço de envio, de 12MB para 120MB.</p>
-              </div>
-              <div className="benefit_image">
-                <Image 
-                  src={require("../../public/assets/upload-more.png")}
-                  alt="Aumentando espaço upload 120MB"
-                  quality={70}
-                />
               </div>
             </div>
             <div className="benefit_card">
@@ -114,7 +100,6 @@ const Star: React.FC = () => {
                   grupos.
                 </p>
               </div>
-              <div className="benefit_image">{/* <Image /> */}</div>
             </div>
             <div className="benefit_card">
               <div className="benefit_title">
@@ -122,13 +107,6 @@ const Star: React.FC = () => {
               </div>
               <div className="benefit_description">
                 <p>Aumente a quantidade de participantes de mil para 10 mil</p>
-              </div>
-              <div className="benefit_image">
-                <Image 
-                  src={require("../../public/assets/more-participants.png")}
-                  alt="Mais participantes nos grupos"
-                  quality={70}
-                />
               </div>
             </div>
             <div className="benefit_card">
@@ -141,13 +119,6 @@ const Star: React.FC = () => {
                   mundo que nos apoia!
                 </p>
               </div>
-              <div className="benefit_image">
-                <Image 
-                  src={require("../../public/assets/name-icon.png")}
-                  alt="Emblema de uma estrela ao lado do seu nome"
-                  quality={70}
-                />
-              </div>
             </div>
             <div className="benefit_card">
               <div className="benefit_title">
@@ -159,13 +130,6 @@ const Star: React.FC = () => {
                   incrível!
                 </p>
               </div>
-              <div className="benefit_image">
-                <Image 
-                  src={require("../../public/assets/help-dev.png")}
-                  alt="Imagem ajudando desenvolvimento Saturn Chat"
-                  quality={70}
-                />
-              </div>
             </div>
           </div>
         </BenefitsContainer>
@@ -175,9 +139,7 @@ const Star: React.FC = () => {
             ganhe todos esses recursos e muito mais!
           </h3>
           <Link href="/download" passHref>
-            <a>
-              Baixar e tornar-se Star
-            </a>
+            <a>Baixar e tornar-se Star</a>
           </Link>
         </DownloadContainer>
         <Footer />

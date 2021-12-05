@@ -130,8 +130,7 @@ export default function Home() {
               <p>
                 Com o Saturn Chat, você tem a garantia que vai ter um aplicativo
                 rápido na maioria dos dispositivos, com baixa latência e sem
-                riscos de segurança no envio de mensagens e mais leve que todos
-                os outros apps (menos de 40MB).
+                riscos de segurança no envio de mensagens e bem leve (menos de 75MB).
               </p>
             </div>
           </div>
