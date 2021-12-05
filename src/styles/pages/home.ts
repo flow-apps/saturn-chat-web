@@ -217,6 +217,7 @@ export const GetAppContainer = styled.div`
     font-size: 2.5rem; 
     margin-bottom: 1.5rem;
     text-align: center;
+    color: ${props => props.theme.colors.black};
   }
 
   a {

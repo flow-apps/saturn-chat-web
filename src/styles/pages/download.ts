@@ -147,6 +147,7 @@ export const DownloadsContainer = styled.main`
         h2 {
           font-size: 2.5rem;
           text-align: center;
+          color: ${props => props.theme.colors.black};
         }
       }
 

@@ -216,6 +216,7 @@ export const DownloadContainer = styled.section`
   h3 {
     font-size: 2.5rem;
     max-width: var(--page-max-width);
+    color: ${props => props.theme.colors.black};
 
     @media (max-width: 780px) {
       font-size: 1.9rem;

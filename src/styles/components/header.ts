@@ -47,7 +47,7 @@ export const IconContainer = styled.a<HeaderProps>`
     font-family: Poppins, sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
-    color: ${props => props.colorScheme || "#fff"};
+    color: ${props => props.colorScheme ? props.theme.colors[props.colorScheme] : "#fff"};
     sup {
       font-family: Poppins;
       font-size: 1rem;
@@ -121,7 +121,7 @@ export const OpenMenu = styled.button<HeaderProps>`
   background: transparent;
   border: none;
   font-size: 3.5rem;
-  color: ${props => props.colorScheme || "#fff"};
+  color: ${props => props.colorScheme ? props.theme.colors[props.colorScheme] : "#fff"};
 
 
   @media (min-width: 450px) {
@@ -151,7 +151,7 @@ export const NavOption = styled.div<HeaderProps>`
   a {
     font-size: 1.5rem;
     font-weight: 600;
-    color: ${props => props.colorScheme || "#fff"};
+    color: ${props => props.colorScheme ? props.theme.colors[props.colorScheme] : "#fff"};
     text-align: center;
     line-height: 1.8rem;
   }
