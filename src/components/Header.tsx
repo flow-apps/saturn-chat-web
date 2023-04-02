@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import icon from "../../public/assets/icon.png";
 import Image from "next/image";
 import Link from "next/link";
-import { FiMenu, FiArrowLeft } from "react-icons/fi";
+import { FiMenu, FiArrowLeft, FiMoon, FiSun } from "react-icons/fi";
 import { ImSwitch } from "react-icons/im";
 import {
   Container,
@@ -29,7 +29,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
   const NavBarOptions = [
     {
       path: "/download",
-      text: "Baixar",
+      text: "Baixar agora",
     },
     {
       path: "/star",
@@ -52,7 +52,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
             height={90}
             quality={60}
           />
-          <span>
+          <span style={{ color: theme.colors.secondary }}>
             Saturn Chat <sup>Beta</sup>
           </span>
         </IconContainer>
@@ -75,13 +75,23 @@ const Header = ({ colorScheme }: HeaderProps) => {
         <NavOptions hidden={hiddenNav}>
           <NavOption colorScheme={colorScheme}>
             <a onClick={changeTheme}>
-              <ImSwitch
-                style={{
-                  cursor: "pointer",
-                  fontSize: 18,
-                  color: theme.colors.dark_heading,
-                }}
-              />
+              {
+                theme.title === "light" ?
+                <FiMoon
+                  style={{
+                    cursor: "pointer",
+                    fontSize: 22,
+                    color: theme.colors.primary,
+                  }}
+                /> :
+                <FiSun
+                  style={{
+                    cursor: "pointer",
+                    fontSize: 22,
+                    color: theme.colors.secondary,
+                  }}
+                />
+              }
             </a>
           </NavOption>
 
@@ -89,7 +99,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
             return (
               <NavOption key={key} colorScheme={colorScheme}>
                 <Link href={path}>
-                  <a>{text}</a>
+                  <a style={{ color: theme.colors.dark_gray }}>{text}</a>
                 </Link>
               </NavOption>
             );

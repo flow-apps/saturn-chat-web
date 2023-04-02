@@ -13,18 +13,19 @@ const Download: React.FC = () => {
   const getDownloadButton = () => {
     if (isAndroid) {
       return (
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          id="download_button"
-        >
-          <FiDownload id="icon" /> Baixar na Play Store
-        </a>
+        // <a
+        //   href="http://"
+        //   target="_blank"
+        //   rel="noopener noreferrer"
+        //   id="download_button"
+        // >
+        //   <FiDownload id="icon" /> Baixar na Play Store
+        // </a>
+        <span id="soon">
+          Em breve no seu dispositivo
+        </span>
       );
-    }
-
-    if (isIOS) {
+    } else if (isIOS) {
       return (
         // <a
         //   href="http://"
@@ -97,9 +98,12 @@ const Download: React.FC = () => {
                 />
               </div>
               <div className="get_container">
-                <a href="http://" target="_blank" rel="noopener noreferrer">
-                  Eu quero esse
-                </a>
+                {/* <a href="http://" target="_blank" rel="noopener noreferrer">
+                  Baixar agora
+                </a> */}
+                <span id="soon">
+                  Em breve
+                </span>
               </div>
             </div>
             <div className="download_card">
@@ -115,7 +119,7 @@ const Download: React.FC = () => {
               </div>
               <div className="get_container">
                 {/* <a href="http://" target="_blank" rel="noopener noreferrer">
-                  Eu quero esse
+                  Baixar agora
                 </a> */}
                 <span id="soon">
                   Em breve
