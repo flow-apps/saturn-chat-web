@@ -7,7 +7,7 @@ export const Container = styled.footer`
   align-items: center;
   justify-content: space-around;
   height: 10rem;
-  background-color: #333;
+  background-color: ${({ theme }) => theme.colors.secondary};
   padding: 3rem 1.5rem;
 
   .social_networks_container {
@@ -40,7 +40,7 @@ export const Container = styled.footer`
 
       a {
         font-size: 1.5rem;
-        color: #999;
+        color: #FFF;
         text-align: center;
 
         &:hover {
@@ -53,7 +53,7 @@ export const Container = styled.footer`
   }
 
   #copyright {
-    color: #777;
+    color: #EAEAEA;
     font-size: 1.4rem;
     margin-top: 2rem;
     text-align: center;

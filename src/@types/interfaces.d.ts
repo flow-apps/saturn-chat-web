@@ -8,7 +8,7 @@ export interface GroupData {
   id: string;
   name: string;
   description: string;
-  avatar: {
+  group_avatar: {
     id: string;
     url: string;
   }

@@ -40,8 +40,7 @@ export default function Home() {
               <h1>Converse com o mundo.</h1>
               <p>
                 No Saturn Chat você consegue se unir ao seu grupo escolar, com
-                seus amigos ou até mesmo com sua família. Onde todos passam o
-                tempo juntos e se divertem. Sempre aproveitando todos os
+                seus amigos ou até mesmo com sua família, sempre aproveitando todos os
                 recursos que tornam a conversa mais rápida, dinâmica e sempre
                 mantendo sua privacidade. Que tal começar sua jornada agora?
               </p>

@@ -44,12 +44,12 @@ const Star: React.FC = () => {
                 exclusivo ao lado de seu nome, crie muito mais grupos, e mais.
               </p>
               <span className="price">
-                <span id="currency">R$</span> 439,89{" "}
+                <span id="currency">R$</span> 299,99{" "}
                 <span id="per">por ano</span>
-                <span id="discount_container">R$ 479,88</span>
+                <span id="discount_container">R$ 359,99</span>
               </span>
               <span className="price">
-                <span id="currency">R$</span> 39,99{" "}
+                <span id="currency">R$</span> 29,99{" "}
                 <span id="per">por mês</span>
               </span>
             </div>

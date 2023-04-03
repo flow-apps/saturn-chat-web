@@ -52,7 +52,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
             height={90}
             quality={60}
           />
-          <span style={{ color: theme.colors.secondary }}>
+          <span>
             Saturn Chat <sup>Beta</sup>
           </span>
         </IconContainer>
@@ -99,7 +99,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
             return (
               <NavOption key={key} colorScheme={colorScheme}>
                 <Link href={path}>
-                  <a style={{ color: theme.colors.dark_gray }}>{text}</a>
+                  <a>{text}</a>
                 </Link>
               </NavOption>
             );

@@ -14,9 +14,8 @@ export const WelcomeContainer = styled.header`
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 95vh;
-  background: url("/assets/background.jpg") no-repeat #181d3b;
-  background-size: cover;
+  height: 97vh;
+  background: #181d3b;
 
   @media (max-width: 460px) {
     height: 75vh;
@@ -45,7 +44,7 @@ export const WelcomeContentContainer = styled.div`
     }
   
     p {
-      font-size: 2rem;
+      font-size: 1.8rem;
       width: 70%;
       color: #fff;
       text-align: center;
