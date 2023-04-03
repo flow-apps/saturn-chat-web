@@ -8,6 +8,12 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #171717;
+
+  #app_warning {
+    color: ${({ theme }) => theme.colors.secondary};
+    font-size: 1rem;
+  }
+
 `;
 
 export const InviteCard = styled.main`
@@ -21,6 +27,7 @@ export const InviteCard = styled.main`
   padding: 1.2rem;
   border-radius: 8px;
   background-color: #292929;
+  margin-bottom: 1.5rem;
 
   .presentation_title {
     font-size: 1.4rem;
@@ -48,6 +55,14 @@ export const GroupInfosContainer = styled.footer`
   justify-content: center;
   flex-direction: column;
   width: 100%;
+
+  #invalid_inv_message {
+    font-size: 1.3rem;
+    text-align: center;
+    color: ${({ theme }) => theme.colors.dark_gray};
+    margin-top: .8rem;
+  }
+
   h1 {
     font-size: 2.2rem;
     color: #fff;
