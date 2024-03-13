@@ -32,9 +32,11 @@ function MyApp({ Component, pageProps }: AppProps) {
                         name="og:keywords"
                         content="saturn chat, chat online, mobile chat, voice chat, chat for gamers, chat para jogar, chat para gamers, aplicativo grátis de conversa online, batepapo online"
                     />
+                    <meta name="google-site-verification" content="QknoFbNAM4A4QAmJVKJvaMROn2gasuAII8y7Q_8XRls" />
                     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
                     <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" />
+
                 </Head>
                 <Component {...pageProps} />
             </ThemeProvider>
