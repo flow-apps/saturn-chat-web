@@ -7,7 +7,8 @@
       "namespace": "android_app",
       "package_name": "com.flowapps.saturnchat",
       "sha256_cert_fingerprints": [
-        "12:2A:66:CE:30:0B:AF:E5:2B:24:B2:0E:37:68:3D:3B:BA:7E:E6:3D:B0:9A:8F:F5:DB:43:F0:68:8A:30:BF:83"
+        "12:2A:66:CE:30:0B:AF:E5:2B:24:B2:0E:37:68:3D:3B:BA:7E:E6:3D:B0:9A:8F:F5:DB:43:F0:68:8A:30:BF:83",
+        "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"
       ]
     }
   }
