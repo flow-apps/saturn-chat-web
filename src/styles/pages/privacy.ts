@@ -47,6 +47,10 @@ export const PrivacyContainer = styled.main`
     font-size: 1.8rem;
   }
 
+  h4 {
+    font-size: 1.6rem;
+  }
+
   p, li {
     font-size: 1.6rem;
     margin: 1rem;
