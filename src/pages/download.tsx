@@ -13,17 +13,14 @@ const Download: React.FC = () => {
   const getDownloadButton = () => {
     if (isAndroid) {
       return (
-        // <a
-        //   href="http://"
-        //   target="_blank"
-        //   rel="noopener noreferrer"
-        //   id="download_button"
-        // >
-        //   <FiDownload id="icon" /> Baixar na Play Store
-        // </a>
-        <span id="soon">
-          Em breve no seu dispositivo
-        </span>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.flowapps.saturnchat"
+          target="_blank"
+          rel="noopener noreferrer"
+          id="download_button"
+        >
+          <FiDownload id="icon" /> Baixar na Play Store
+        </a>
       );
     } else if (isIOS) {
       return (
@@ -98,12 +95,12 @@ const Download: React.FC = () => {
                 />
               </div>
               <div className="get_container">
-                {/* <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="https://play.google.com/store/apps/details?id=com.flowapps.saturnchat" target="_blank" rel="noopener noreferrer">
                   Baixar agora
-                </a> */}
-                <span id="soon">
+                </a>
+                {/* <span id="soon">
                   Em breve
-                </span>
+                </span> */}
               </div>
             </div>
             <div className="download_card">

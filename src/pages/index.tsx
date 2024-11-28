@@ -45,7 +45,7 @@ export default function Home() {
                 mantendo sua privacidade. Que tal começar sua jornada agora?
               </p>
               <div className="download_buttons_container">
-                <Link href="/">
+                <Link href="https://play.google.com/store/apps/details?id=com.flowapps.saturnchat">
                   <a className="download_button android">
                     <FaAndroid className="icon" /> Android
                   </a>
