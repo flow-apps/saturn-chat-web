@@ -34,7 +34,6 @@ const Star: React.FC = () => {
       <Container>
         <PresentationContainer>
           <Header />
-
           <div className="content">
             <div id="content_container">
               <h1>Plano Star</h1>
@@ -44,12 +43,12 @@ const Star: React.FC = () => {
                 exclusivo ao lado de seu nome, crie muito mais grupos, e mais.
               </p>
               <span className="price">
-                <span id="currency">R$</span> 299,99{" "}
+                <span id="currency">R$</span> 239,99{" "}
                 <span id="per">por ano</span>
-                <span id="discount_container">R$ 359,99</span>
+                <span id="discount_container">R$ 219,99</span>
               </span>
               <span className="price">
-                <span id="currency">R$</span> 29,99{" "}
+                <span id="currency">R$</span> 19,99{" "}
                 <span id="per">por mês</span>
               </span>
             </div>
@@ -87,7 +86,7 @@ const Star: React.FC = () => {
                 <h3>Faça uploads maiores</h3>
               </div>
               <div className="benefit_description">
-                <p>Aumente em 10x o espaço de envio, de 12MB para 120MB.</p>
+                <p>Aumente em 2x o espaço de envio, de 5MB para 10MB.</p>
               </div>
             </div>
             <div className="benefit_card">
@@ -96,7 +95,7 @@ const Star: React.FC = () => {
               </div>
               <div className="benefit_description">
                 <p>
-                  Tenha mais grupos para caber todos seus amigos, de 2 para 20
+                  Tenha mais grupos para caber todos seus amigos, de 5 para 10
                   grupos.
                 </p>
               </div>
@@ -106,7 +105,7 @@ const Star: React.FC = () => {
                 <h3>Tenha mais amigos no grupo</h3>
               </div>
               <div className="benefit_description">
-                <p>Aumente a quantidade de participantes de mil para 10 mil</p>
+                <p>Aumente a quantidade de participantes de 100 para 250</p>
               </div>
             </div>
             <div className="benefit_card">
