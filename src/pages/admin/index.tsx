@@ -1,3 +1,5 @@
+import AdminSideBar from "@component/AdminSideBar";
+import { AppContainer, Container } from "@styles/pages/admin";
 import React from "react";
 import { useAdminAuth } from "src/hooks/useAdminAuth";
 
@@ -13,10 +15,12 @@ const AdminPage: React.FC = () => {
   }
 
   return (
-    <div>
-      <h1>Painel de Administração</h1>
-      <p>Bem-vindo, {user.name}!</p>
-    </div>
+    <Container>
+      <AdminSideBar />
+      <AppContainer>
+        <h1>Bem-vindo</h1>
+      </AppContainer>
+    </Container>
   );
 };
 
