@@ -10,27 +10,44 @@ import {
 import Image from "next/image";
 import React from "react";
 import { useAdminAuth } from "src/hooks/useAdminAuth";
-import { FiAlertOctagon, FiHome, FiOctagon, FiUser, FiUsers } from "react-icons/fi";
+import {
+  FiAlertOctagon,
+  FiHome,
+  FiMessageCircle,
+  FiSettings,
+  FiUser,
+  FiUsers,
+} from "react-icons/fi";
 const menuItems = [
   {
     name: "Home",
-    path: "#",
+    path: "/admin",
     icon: <FiHome size={25} />,
   },
   {
     name: "Usuários",
-    path: "#",
+    path: "/admin/users",
     icon: <FiUser size={25} />,
   },
   {
     name: "Grupos",
-    path: "#",
+    path: "/admin/groups",
     icon: <FiUsers size={25} />,
   },
   {
     name: "Denúncias",
     path: "#",
     icon: <FiAlertOctagon size={25} />,
+  },
+  {
+    name: "Feedbacks",
+    path: "#",
+    icon: <FiMessageCircle size={25} />,
+  },
+  {
+    name: "Configurações",
+    path: "#",
+    icon: <FiSettings size={25} />,
   },
 ];
 
@@ -42,7 +59,7 @@ const AdminSideBar: React.FC = () => {
         <UserContainer>
           <UserAvatarContainer>
             <Image
-              src={"/avatar-placeholder.png"}
+              src={user?.avatar ? user.avatar.url : "/avatar-placeholder.png"}
               width={50}
               height={50}
               alt="User Avatar"
