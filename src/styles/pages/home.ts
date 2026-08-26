@@ -219,7 +219,7 @@ export const GetAppContainer = styled.div`
     color: ${props => props.theme.colors.black};
   }
 
-  a {
+  div {
     display: flex;
     align-items: center;
     justify-content: center;

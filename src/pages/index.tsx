@@ -40,20 +40,21 @@ export default function Home() {
               <h1>Converse com o mundo.</h1>
               <p>
                 No Saturn Chat você consegue se unir ao seu grupo escolar, com
-                seus amigos ou até mesmo com sua família, sempre aproveitando todos os
-                recursos que tornam a conversa mais rápida, dinâmica e sempre
-                mantendo sua privacidade. Que tal começar sua jornada agora?
+                seus amigos ou até mesmo com sua família, sempre aproveitando
+                todos os recursos que tornam a conversa mais rápida, dinâmica e
+                sempre mantendo sua privacidade. Que tal começar sua jornada
+                agora?
               </p>
               <div className="download_buttons_container">
                 <Link href="https://play.google.com/store/apps/details?id=com.flowapps.saturnchat">
-                  <a className="download_button android">
+                  <div className="download_button android">
                     <FaAndroid className="icon" /> Android
-                  </a>
+                  </div>
                 </Link>
                 <Link href="/">
-                  <a className="download_button ios">
+                  <div className="download_button ios">
                     <FaApple className="icon" /> IOS
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -137,9 +138,9 @@ export default function Home() {
         <GetAppContainer>
           <h3>Que tal começar agora?</h3>
           <Link href="/download">
-            <a>
+            <div>
               <FiDownload fontSize={18} className="icon" /> Baixe agora
-            </a>
+            </div>
           </Link>
         </GetAppContainer>
         <Footer />

@@ -74,7 +74,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
 
         <NavOptions hidden={hiddenNav}>
           <NavOption colorScheme={colorScheme}>
-            <a onClick={changeTheme}>
+            <div onClick={changeTheme}>
               {
                 theme.title === "light" ?
                 <FiMoon
@@ -92,14 +92,14 @@ const Header = ({ colorScheme }: HeaderProps) => {
                   }}
                 />
               }
-            </a>
+            </div>
           </NavOption>
 
           {NavBarOptions.map(({ path, text }, key) => {
             return (
               <NavOption key={key} colorScheme={colorScheme}>
                 <Link href={path}>
-                  <a>{text}</a>
+                  <div>{text}</div>
                 </Link>
               </NavOption>
             );
