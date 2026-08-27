@@ -28,28 +28,33 @@ const AdminUsersManager: React.FC = () => {
   const [page, setPage] = useState<number>(0);
   const [hasMore, setHasMore] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
+  const [search, setSearch] = useState<string>("");
+  const [query, setQuery] = useState<string>("");
 
   const observer = useRef<IntersectionObserver | null>(null);
 
-  const fetchUsers = useCallback(async (currentPage: number) => {
+  const fetchUsers = useCallback(async (currentPage: number, searchQuery: string) => {
     setLoading(true);
     try {
       const { status, data } = await api.get<IResponseData>("/admin/users", {
         params: {
           _page: currentPage,
           _limit: DEFAULT_LIMIT,
+          query: searchQuery || undefined,
         },
       });
 
       if (status === 200) {
-        if (!total) {
-          setTotal(data.total);
-        }
+        setTotal(data.total);
         setUsers((prevUsers) => {
-          const updatedUsers = [...prevUsers, ...data.users];
+          const updatedUsers = currentPage === 0 ? data.users : [...prevUsers, ...data.users];
+          
           if (updatedUsers.length >= data.total || data.users.length === 0) {
             setHasMore(false);
+          } else {
+            setHasMore(true);
           }
+          
           return updatedUsers;
         });
       }
@@ -61,8 +66,20 @@ const AdminUsersManager: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    fetchUsers(page);
-  }, [page, fetchUsers]);
+    fetchUsers(page, query);
+  }, [page, query, fetchUsers]);
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setUsers([]);
+    setHasMore(true);
+    if (page === 0) {
+      setQuery(search);
+    } else {
+      setQuery(search);
+      setPage(0);
+    }
+  };
 
   const lastUserElementRef = useCallback(
     (node: HTMLDivElement | null) => {
@@ -85,9 +102,15 @@ const AdminUsersManager: React.FC = () => {
       <AdminSideBar />
       <AppContainer>
         <h1>Todos os usuários ({total})</h1>
-        <InputContainer>
-          <UserInput type="text" placeholder="Nome de usuário..." />
-          <SearchButton>
+
+        <InputContainer as="form" onSubmit={handleSearchSubmit}>
+          <UserInput
+            type="text"
+            placeholder="Nome de usuário..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <SearchButton type="submit">
             <FiSearch size={20} />
           </SearchButton>
         </InputContainer>
@@ -97,7 +120,7 @@ const AdminUsersManager: React.FC = () => {
             const isLastElement = users.length === index + 1;
             return (
               <UserContainer
-                key={index}
+                key={`${user.id}-${index}`}
                 ref={isLastElement ? lastUserElementRef : null}
               >
                 <UserCard href={`/admin/users/${user.id}`}>
