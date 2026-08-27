@@ -51,11 +51,11 @@ export default function Home() {
                     <FaAndroid className="icon" /> Android
                   </div>
                 </Link>
-                <Link href="/">
+                {/* <Link href="/">
                   <div className="download_button ios">
                     <FaApple className="icon" /> IOS
                   </div>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </WelcomeContentContainer>

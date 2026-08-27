@@ -31,7 +31,7 @@ export const Container = styled.header`
   max-width: var(--page-max-width);
 `;
 
-export const IconContainer = styled.a<HeaderProps>`
+export const IconContainer = styled.div<HeaderProps>`
   display: flex;
   align-items: center;
   justify-content: center;
