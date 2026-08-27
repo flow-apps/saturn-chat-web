@@ -110,6 +110,7 @@ export const NavigatorContainer = styled.nav`
   flex-direction: column;
   gap: 8px;
   overflow-y: auto;
+  overflow-x: hidden;
 `;
 
 export const NavigatorOption = styled(Link)`
