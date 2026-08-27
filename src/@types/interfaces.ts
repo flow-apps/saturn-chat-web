@@ -160,3 +160,14 @@ export interface ISetting {
   typeof_value: string;
   input_type: string;
 }
+
+export interface IDashboardData {
+  counts: {
+    users: number;
+    groups: number;
+    messages: number;
+    reports: number;
+    feedbacks: number;
+    subscriptions: number;
+  };
+}

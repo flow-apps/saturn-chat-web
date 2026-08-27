@@ -47,10 +47,21 @@ export const UserContainer = styled.div`
   padding: 1.2rem;
   border-radius: 12px;
   color: ${({ theme }) => theme.colors.black};
+
+  transition: 200ms;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.secondary};
+    transform: scale(1.1)
+  }
 `;
 
 export const UserCard = styled(Link)`
   color: ${({ theme }) => theme.colors.black};
+  transition: 200ms;
+
+  &:hover {
+    color: #fff;
+  }
 `;
 
 export const UserAvatarContainer = styled.div``;
