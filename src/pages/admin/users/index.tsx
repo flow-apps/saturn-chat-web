@@ -36,8 +36,8 @@ const AdminUsersManager: React.FC = () => {
     try {
       const { status, data } = await api.get<IResponseData>("/admin/users", {
         params: {
-          page: currentPage,
-          limit: DEFAULT_LIMIT,
+          _page: currentPage,
+          _limit: DEFAULT_LIMIT,
         },
       });
 
