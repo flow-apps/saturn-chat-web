@@ -68,7 +68,7 @@ const AdminPage: React.FC = () => {
               <DashboardCardHeader>
                 <p>Denúncias abertas</p>
               </DashboardCardHeader>
-              <h2>{dashData?.counts.messages}</h2>
+              <h2>{dashData?.counts.reports}</h2>
             </DashboardCard>
             <DashboardCard>
               <DashboardCardHeader>
