@@ -104,10 +104,14 @@ const AdminUsersManager: React.FC = () => {
                   <UserAvatarContainer>
                     <UserAvatar
                       src={
-                        user?.avatar
+                        user?.avatar?.url
                           ? user.avatar.url
                           : "/avatar-placeholder.png"
                       }
+                      onError={(e) => {
+                        e.currentTarget.srcset = "/avatar-placeholder.png";
+                        e.currentTarget.src = "/avatar-placeholder.png";
+                      }}
                       width={75}
                       height={75}
                       alt="User Avatar"

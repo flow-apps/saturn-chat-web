@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  height: 100vh;
+  overflow: hidden;
 `;
 
 export const AppContainer = styled.main`
   padding: 3rem;
   background-color: ${({ theme }) => theme.colors.background};
-  width: 100%
+  width: 100%;
+  overflow-y: auto;
 `;
 
 export const GrettingContainer = styled.div`

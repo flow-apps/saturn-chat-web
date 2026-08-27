@@ -8,6 +8,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   color: #fff;
   padding: 20px;
+  position: sticky;
 `;
 
 export const HeaderContainer = styled.div`

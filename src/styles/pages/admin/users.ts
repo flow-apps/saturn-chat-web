@@ -33,7 +33,11 @@ export const SearchButton = styled.button`
 
 export const UsersListContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin: 2rem 0;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const UserContainer = styled.div`
