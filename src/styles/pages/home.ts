@@ -8,17 +8,19 @@ interface AnimationProps {
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 export const WelcomeContainer = styled.header`
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 97vh;
+  min-height: 97vh;
   background: #181d3b;
 
-  @media (max-width: 460px) {
-    height: 75vh;
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 3rem 0;
   }
 `;
 
@@ -26,7 +28,7 @@ export const WelcomeContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 0px 1.5rem;
+  padding: 2rem 1.5rem;
   align-items: center;
   justify-content: center;
 
@@ -35,6 +37,7 @@ export const WelcomeContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 
     h1 {
       font-size: 5rem;
@@ -42,7 +45,7 @@ export const WelcomeContentContainer = styled.div`
       margin-bottom: 1.5rem;
       text-align: center;
     }
-  
+
     p {
       font-size: 1.8rem;
       width: 70%;
@@ -52,19 +55,18 @@ export const WelcomeContentContainer = styled.div`
     }
   }
 
-
   @media (max-width: 800px) {
     .welcome_content {
       h1 {
         width: 100%;
         font-size: 3rem;
-        text-align: left;
+        text-align: center;
       }
-  
+
       p {
         width: 100%;
-        font-size: 1.8rem;
-        text-align: left;
+        font-size: 1.6rem;
+        text-align: center;
       }
     }
   }
@@ -72,16 +74,15 @@ export const WelcomeContentContainer = styled.div`
   .download_buttons_container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 
     .download_button {
-      :not(:last-child) {
-        margin-right: 2.5rem;
-      }
       display: flex;
-
       width: 28rem;
+      max-width: 100%;
       font-size: 1.6rem;
       align-items: center;
       justify-content: center;
@@ -89,7 +90,6 @@ export const WelcomeContentContainer = styled.div`
       border-radius: 35px;
       color: #fff;
       transition: 200ms;
-
       box-shadow: 2px 0px 5px 2px #00000055;
 
       &:hover {
@@ -105,7 +105,7 @@ export const WelcomeContentContainer = styled.div`
       &.android {
         background-color: #3cca62;
         &:hover {
-          background-color:  #3ddc84;
+          background-color: #3ddc84;
         }
       }
 
@@ -117,14 +117,13 @@ export const WelcomeContentContainer = styled.div`
       }
     }
 
-    @media (max-width: 460px) {
+    @media (max-width: 600px) {
       flex-direction: column;
-      & .download_button {
-        width: 280px;
-        margin-bottom: 1.5rem;
-        :first-child {
-          margin-right: 0; 
-        }
+      width: 100%;
+
+      .download_button {
+        width: 100%;
+        max-width: 280px;
       }
     }
   }
@@ -139,9 +138,10 @@ export const PresentationsContainer = styled.main`
 
   .presentation_container {
     display: flex;
-    height: 85vh;
-    flex: 1;
-    padding: 10rem 5rem;
+    min-height: 85vh;
+    width: 100%;
+    padding: 6rem 5rem;
+    align-items: center;
 
     &:nth-child(odd) {
       flex-direction: row;
@@ -149,7 +149,7 @@ export const PresentationsContainer = styled.main`
 
     &:nth-child(even) {
       flex-direction: row-reverse;
-      background-color: ${props => props.theme.colors.shape};
+      background-color: ${(props) => props.theme.colors.shape};
     }
 
     & .image_container {
@@ -157,20 +157,24 @@ export const PresentationsContainer = styled.main`
       align-items: center;
       justify-content: center;
       width: 50%;
-      margin: 0 2rem;
+      padding: 0 1rem;
+
       img {
-        object-fit: cover;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
       }
     }
 
     & .content_container {
-      width: 40%;
+      width: 50%;
+      padding: 0 1rem;
     }
 
     h2 {
       font-size: 4.5rem;
       margin-bottom: 1.5rem;
-      color: ${props => props.theme.colors.dark_heading};
+      color: ${(props) => props.theme.colors.dark_heading};
     }
 
     p {
@@ -180,22 +184,30 @@ export const PresentationsContainer = styled.main`
     }
 
     @media (max-width: 900px) {
-      &.presentation_container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+      min-height: auto;
+      padding: 4rem 2rem;
+      flex-direction: column !important;
 
-        & .content_container {
-          width: 100%;
+      & .image_container,
+      & .content_container {
+        width: 100%;
+        padding: 0;
+      }
 
-          h2 {
-            font-size: 3rem;
-          }
+      & .image_container {
+        margin-bottom: 2.5rem;
+      }
+
+      & .content_container {
+        text-align: center;
+
+        h2 {
+          font-size: 3rem;
         }
 
-        & .image_container {
-          width: 100%;
-          margin-bottom: 2.5rem;
+        p {
+          font-size: 1.6rem;
+          line-height: 2.5rem;
         }
       }
     }
@@ -204,29 +216,27 @@ export const PresentationsContainer = styled.main`
 
 export const GetAppContainer = styled.div`
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 20vh;
-  padding: 10rem 5rem;
-
+  padding: 6rem 2rem;
 
   h3 {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: ${props => props.theme.colors.black};
+    color: ${(props) => props.theme.colors.black};
   }
 
   div {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     font-size: 1.6rem;
     padding: 1.5rem;
-    background-color: ${props => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.primary};
     color: #fff;
     text-align: center;
     border-radius: 35px;
@@ -237,9 +247,9 @@ export const GetAppContainer = styled.div`
     }
 
     &:hover {
-      background-color: ${props => props.theme.colors.light_primary};
+      background-color: ${(props) => props.theme.colors.light_primary};
       transition: 200ms;
       box-shadow: none;
     }
   }
-`
+`;
