@@ -9,7 +9,7 @@ import {
 } from "@styles/components/adminSideBar";
 import Image from "next/image";
 import React from "react";
-import { useAdminAuth } from "src/hooks/useAdminAuth";
+import { useAdminAuth } from "@hooks/useAdminAuth";
 import {
   FiAlertOctagon,
   FiHome,

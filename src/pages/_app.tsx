@@ -4,10 +4,10 @@ import type { AppProps } from "next/app";
 import { GlobalStyle } from "@styles/global";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
-import { ThemeChooseContext } from "src/hooks/useTheme";
+import { ThemeChooseContext } from "@hooks/useTheme";
 import LightTheme from "@styles/themes/light";
 import BlackTheme from "@styles/themes/dark";
-import { ThemeType } from "src/@types/styled.theme";
+import { ThemeType } from "@_types/styled.theme";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function MyApp({ Component, pageProps }: AppProps) {

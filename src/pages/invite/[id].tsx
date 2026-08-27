@@ -11,7 +11,7 @@ import {
 } from "../../styles/pages/invite";
 import { GetStaticPathsContext, GetStaticPropsContext } from "next";
 import { api } from "../../services/api";
-import { InviteData } from "src/@types/interfaces";
+import { InviteData } from "@_types/interfaces";
 
 const Invite: React.FC<{ invite: InviteData }> = ({ invite }) => {
   return (

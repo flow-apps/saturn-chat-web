@@ -5,7 +5,6 @@ import {
 } from "@styles/pages/admin";
 import { useRouter } from "next/router";
 import React from "react";
-import { useAdminAuth } from "src/hooks/useAdminAuth";
 
 const AdminUserManager: React.FC = () => {
 

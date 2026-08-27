@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { IThemeCreate } from "./interface";
 import darkTheme from "@styles/themes/dark";
 import lightTheme from "@styles/themes/light";
-import { ThemeType } from "src/@types/styled.theme";
+import { ThemeType } from "@_types/styled.theme";
 
 export const ThemeChooseContext = createContext<IThemeCreate>(
   {} as IThemeCreate,

@@ -4,7 +4,6 @@ import {
   Container,
 } from "@styles/pages/admin";
 import React from "react";
-import { useAdminAuth } from "src/hooks/useAdminAuth";
 
 const AdminGroupsManager: React.FC = () => {
   return (

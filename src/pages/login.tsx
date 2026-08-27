@@ -1,6 +1,6 @@
 import { Container } from "@styles/pages/login";
 import React, { FormEvent, useState } from "react";
-import { api, nextApi } from "src/services/api";
+import { api, nextApi } from "@services/api";
 import { useRouter } from "next/router";
 
 const LoginPage: React.FC = () => {

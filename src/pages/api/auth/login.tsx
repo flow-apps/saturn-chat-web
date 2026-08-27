@@ -1,6 +1,6 @@
 // src/pages/api/auth/login.ts
 import type { NextApiRequest, NextApiResponse } from "next";
-import { api } from "src/services/api";
+import { api } from "@services/api";
 
 export default async function handler(
   req: NextApiRequest,

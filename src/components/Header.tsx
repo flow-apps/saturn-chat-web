@@ -14,7 +14,7 @@ import {
   OpenMenu,
 } from "@styles/components/header";
 import { useTheme } from "styled-components";
-import { useChooseTheme } from "src/hooks/useTheme";
+import { useChooseTheme } from "@hooks/useTheme";
 
 interface HeaderProps {
   colorScheme?: "black" | "white";
@@ -74,6 +74,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
 
         <NavOptions hidden={hiddenNav}>
           <NavOption colorScheme={colorScheme}>
+            {/* @ts-ignore */}
             <div onClick={changeTheme}>
               {
                 theme.title === "light" ?

@@ -12,8 +12,8 @@ import {
 } from "@styles/pages/admin/users";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import { UserData } from "src/@types/interfaces";
-import { api } from "src/services/api";
+import { UserData } from "@_types/interfaces";
+import { api } from "@services/api";
 
 const DEFAULT_LIMIT = 50;
 

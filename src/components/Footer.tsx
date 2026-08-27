@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FiInstagram, FiYoutube } from "react-icons/fi";
 
 import { Container } from "@styles/components/footer";
-import { useChooseTheme } from "src/hooks/useTheme";
+import { useChooseTheme } from "@hooks/useTheme";
 
 const Footer: React.FC = () => {
   const SocialNetworks = [

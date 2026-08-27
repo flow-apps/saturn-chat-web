@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeType } from 'src/@types/styled.theme';
+import { ThemeType } from '@_types/styled.theme';
 
 export interface IThemeCreate {
     currentTheme: ThemeType;

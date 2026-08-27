@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { api } from "src/services/api";
-import { UserData } from "src/@types/interfaces";
+import { api } from "@services/api";
+import { UserData } from "@_types/interfaces";
 
 export function useAdminAuth() {
   const router = useRouter();

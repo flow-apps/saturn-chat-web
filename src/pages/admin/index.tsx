@@ -9,7 +9,7 @@ import {
   GrettingContainer,
 } from "@styles/pages/admin";
 import React from "react";
-import { useAdminAuth } from "src/hooks/useAdminAuth";
+import { useAdminAuth } from "@hooks/useAdminAuth";
 
 const AdminPage: React.FC = () => {
   const { user, loading } = useAdminAuth();
