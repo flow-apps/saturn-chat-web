@@ -8,6 +8,7 @@ import { ThemeChooseContext } from "src/hooks/useTheme";
 import LightTheme from "@styles/themes/light";
 import BlackTheme from "@styles/themes/dark";
 import { ThemeType } from "src/@types/styled.theme";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [currentTheme, setCurrentTheme] = useState<ThemeType>(LightTheme);
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     >
       <ThemeProvider theme={currentTheme}>
         <GlobalStyle />
+        <SpeedInsights />
         <Head>
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="Saturn Chat" />

@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 export const nextApi = axios.create({
-  baseURL: "http://localhost:3002/",
+  baseURL: process.env.NEXT_PUBLIC_WEBSITE_URL,
 });
 
 export const api = axios.create({

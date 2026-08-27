@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "axios": "^1.20.0",
     "babel-plugin-styled-components": "^2.3.0",
     "js-cookie": "^3.0.8",

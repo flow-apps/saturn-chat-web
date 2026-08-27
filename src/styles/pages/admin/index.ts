@@ -7,6 +7,7 @@ export const Container = styled.div`
 export const AppContainer = styled.main`
   padding: 3rem;
   background-color: ${({ theme }) => theme.colors.background};
+  width: 100%
 `;
 
 export const GrettingContainer = styled.div`
