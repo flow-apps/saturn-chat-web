@@ -43,13 +43,12 @@ const Star: React.FC = () => {
                 exclusivo ao lado de seu nome, crie muito mais grupos, e mais.
               </p>
               <span className="price">
-                <span id="currency">R$</span> 239,99{" "}
+                <span id="currency">R$</span> 99,99{" "}
                 <span id="per">por ano</span>
-                <span id="discount_container">R$ 219,99</span>
+                <span id="discount_container">R$ 119,99</span>
               </span>
               <span className="price">
-                <span id="currency">R$</span> 19,99{" "}
-                <span id="per">por mês</span>
+                <span id="currency">R$</span> 9,99 <span id="per">por mês</span>
               </span>
             </div>
             <div id="image_container">
@@ -86,7 +85,7 @@ const Star: React.FC = () => {
                 <h3>Faça uploads maiores</h3>
               </div>
               <div className="benefit_description">
-                <p>Aumente em 2x o espaço de envio, de 5MB para 10MB.</p>
+                <p>Aumente em quase 3x o espaço de envio, de 10MB para 30MB.</p>
               </div>
             </div>
             <div className="benefit_card">
@@ -138,7 +137,7 @@ const Star: React.FC = () => {
             ganhe todos esses recursos e muito mais!
           </h3>
           <Link href="/download" passHref>
-            <a>Baixar e tornar-se Star</a>
+            Baixar e tornar-se Star
           </Link>
         </DownloadContainer>
         <Footer />
