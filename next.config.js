@@ -5,7 +5,7 @@ module.exports = {
       {
         source: '/api/:path*',
         headers: [
-          { key: 'Access-Control-Allow-Origin', value: 'https://saturnchat.com.br' },
+          { key: 'Access-Control-Allow-Origin', value: 'https://www.saturnchat.com.br' },
           { key: 'Access-Control-Allow-Methods', value: 'GET, POST, OPTIONS, DELETE, PATCH' },
           { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
         ],
