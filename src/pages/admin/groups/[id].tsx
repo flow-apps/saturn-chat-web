@@ -29,22 +29,9 @@ import {
   FiUsers,
   FiCheckCircle,
 } from "react-icons/fi";
-import { GroupData } from "@_types/interfaces";
+import { GroupData, IReport } from "@_types/interfaces";
 import { api } from "@services/api";
-import { ReportToType, ReportType } from "@_types/enums";
-
-interface IReport {
-  id: string;
-  reason: string;
-  created_at: string;
-  status: "PENDING" | "RESOLVED";
-  reporter_id: string;
-  reporter?: {
-    id: string;
-    name: string;
-    nickname: string;
-  };
-}
+import { ReportStatus, ReportToType, ReportType } from "@_types/enums";
 
 const AdminGroupDetails: React.FC = () => {
   const router = useRouter();
@@ -123,7 +110,7 @@ const AdminGroupDetails: React.FC = () => {
   }, [id, fetchGroupDetails, fetchReports]);
 
   const pendingReportsCount = reports.filter(
-    (r) => r.status === "PENDING",
+    (r) => r.status === ReportStatus.OPEN,
   ).length;
 
   return (
@@ -198,24 +185,26 @@ const AdminGroupDetails: React.FC = () => {
                 {reports.map((report) => (
                   <ReportCard
                     key={report.id}
-                    $isResolved={report.status === "RESOLVED"}
+                    $isResolved={report.status === ReportStatus.FINISHED}
                   >
                     <div className="report-content">
                       <div className="report-header">
                         <FiAlertOctagon
                           size={16}
                           color={
-                            report.status === "PENDING" ? "#ed6c02" : "#777"
+                            report.status === ReportStatus.OPEN
+                              ? "#ed6c02"
+                              : "#777"
                           }
                         />
                         <strong>Denúncia</strong>
                         <span className="status-tag">
-                          {report.status === "PENDING"
+                          {report.status === ReportStatus.OPEN
                             ? "Pendente"
                             : "Resolvida"}
                         </span>
                       </div>
-                      <p>{report.reason}</p>
+                      <p>{report.message}</p>
                       <div className="report-footer">
                         <span>
                           Enviada em:{" "}
@@ -223,15 +212,15 @@ const AdminGroupDetails: React.FC = () => {
                         </span>
                         <span>
                           Por:{" "}
-                          <Link href={`/admin/users/${report.reporter_id}`}>
-                            {report.reporter?.name ||
-                              `ID: ${report.reporter_id}`}
+                          <Link href={`/admin/users/${report.from_user_id}`}>
+                            {report.from_user?.nickname ||
+                              `ID: ${report.from_user_id}`}
                           </Link>
                         </span>
                       </div>
                     </div>
 
-                    {report.status === "PENDING" && (
+                    {report.status === ReportStatus.OPEN && (
                       <ActionButton
                         $variant="success"
                         onClick={() => handleResolveReport(report.id)}
