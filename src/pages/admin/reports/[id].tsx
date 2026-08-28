@@ -8,7 +8,6 @@ import {
   AppContainer,
   AudioPlayer,
   Container,
-  DangerZoneCard,
   FileAttachment,
   FilesGrid,
   HeaderActions,
@@ -55,6 +54,14 @@ export enum PenaltyType {
   PERM_BAN = "BANNED",
 }
 
+export enum ReportAction {
+  PUNISH_USER = "PUNISH_USER",
+  DELETE_MESSAGE = "DELETE_MESSAGE",
+  DELETE_GROUP = "DELETE_GROUP",
+  DISMISS = "DISMISS",
+  FINISH_WITHOUT_ACTION = "FINISH_WITHOUT_ACTION",
+}
+
 const AdminReportDetails: React.FC = () => {
   const router = useRouter();
   const { id } = router.query;
@@ -97,41 +104,35 @@ const AdminReportDetails: React.FC = () => {
     fetchReportDetails(String(id));
   }, [id, fetchReportDetails]);
 
-  // Atualizar apenas o status da denúncia
-  const handleUpdateStatus = async (newStatus: ReportStatus) => {
+  // Função centralizada para enviar as ações de resolução ao backend
+  const executeReportAction = async (
+    action: ReportAction,
+    payload?: {
+      penalty_type?: PenaltyType;
+      reason?: string;
+      duration_in_days?: number | null;
+    },
+  ) => {
     if (!report) return;
 
     try {
-      await api.patch(`/admin/reports/${report.id}`, { status: newStatus });
-      setReport((prev) => (prev ? { ...prev, status: newStatus } : prev));
-      alert(`Status da denúncia atualizado para ${newStatus}.`);
-    } catch (error) {
-      console.error("Erro ao atualizar status:", error);
-      alert("Falha ao atualizar o status da denúncia.");
-    }
-  };
-
-  // Apagar mensagem isoladamente
-  const handleDeleteMessage = async () => {
-    if (!report || !report.to_message_id) return;
-
-    try {
-      await api.delete(`/admin/messages/${report.to_message_id}`);
-
-      setReport((prev) =>
-        prev
-          ? {
-              ...prev,
-              to_message: undefined,
-            }
-          : prev,
+      const { data } = await api.patch<{ message: string; report: IReport }>(
+        `/admin/reports/${report.id}`,
+        {
+          action,
+          ...payload,
+        },
       );
 
-      setIsDeleteMessageModalOpen(false);
-      alert("Mensagem apagada com sucesso!");
-    } catch (error) {
-      console.error("Erro ao apagar mensagem:", error);
-      alert("Falha ao apagar a mensagem.");
+      setReport(data.report);
+      alert(data.message || "Ação executada com sucesso!");
+      return true;
+    } catch (error: any) {
+      console.error("Erro ao processar ação na denúncia:", error);
+      const errorMessage =
+        error?.response?.data?.message || "Falha ao processar a ação.";
+      alert(errorMessage);
+      return false;
     }
   };
 
@@ -143,61 +144,55 @@ const AdminReportDetails: React.FC = () => {
         ? report.to_message?.author || null
         : null;
 
-  // Ação de Punir Usuário/Autor da Mensagem
+  // Ação 1: Punir Usuário / Autor da Mensagem
   const handleApplyPenalty = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!report || !targetUserToPunish) return;
 
-    try {
-      // 1. Aplica a punição ao usuário responsável
-      await api.post(`/admin/penalties`, {
-        user_id: targetUserToPunish.id,
-        penalty_type: penaltyType,
-        reason: punishReason,
-        applied_by: currentUser?.id,
-        report_id: report.id,
-        duration_in_days:
-          penaltyType === PenaltyType.TEMP_BAN ||
-          penaltyType === PenaltyType.RESTRICTION
-            ? Number(punishDuration)
-            : null,
-      });
+    const success = await executeReportAction(ReportAction.PUNISH_USER, {
+      penalty_type: penaltyType,
+      reason: punishReason,
+      duration_in_days:
+        penaltyType === PenaltyType.TEMP_BAN ||
+        penaltyType === PenaltyType.RESTRICTION
+          ? Number(punishDuration)
+          : null,
+    });
 
-      // 2. Se a denúncia for sobre uma mensagem, apaga a mensagem denunciada
-      if (
-        report.report_to_type === ReportToType.MESSAGE &&
-        report.to_message_id
-      ) {
-        await api.delete(`/admin/messages/${report.to_message_id}`);
+    if (success) {
+      setIsPunishModalOpen(false);
+      // Se era mensagem, atualiza no estado local que a mensagem foi removida pelo backend
+      if (report.report_to_type === ReportToType.MESSAGE) {
         setReport((prev) => (prev ? { ...prev, to_message: undefined } : prev));
       }
-
-      // 3. Atualiza o status da denúncia para FINISHED
-      await handleUpdateStatus(ReportStatus.FINISHED);
-
-      setIsPunishModalOpen(false);
-      alert("Punição aplicada e denúncia resolvida!");
-    } catch (error) {
-      console.error("Erro ao aplicar punição:", error);
-      alert("Falha ao aplicar a punição.");
     }
   };
 
+  // Ação 2: Apagar Mensagem Isoladamente
+  const handleDeleteMessage = async () => {
+    if (!report || !report.to_message_id) return;
+
+    const success = await executeReportAction(ReportAction.DELETE_MESSAGE);
+    if (success) {
+      setIsDeleteMessageModalOpen(false);
+      setReport((prev) => (prev ? { ...prev, to_message: undefined } : prev));
+    }
+  };
+
+  // Ação 3: Excluir Grupo Denunciado
   const handleDeleteGroup = async () => {
     if (!report || !report.to_group_id) return;
 
-    try {
-      await api.delete(`/admin/groups/${report.to_group_id}`);
-
-      await handleUpdateStatus(ReportStatus.FINISHED);
-
+    const success = await executeReportAction(ReportAction.DELETE_GROUP);
+    if (success) {
       setIsDeleteModalOpen(false);
-      alert("Grupo excluído e denúncia resolvida!");
       router.push("/admin/reports");
-    } catch (error) {
-      console.error("Erro ao excluir grupo:", error);
-      alert("Falha ao excluir o grupo.");
     }
+  };
+
+  // Ação 4: Descartar Denúncia
+  const handleDismissReport = async () => {
+    await executeReportAction(ReportAction.DISMISS);
   };
 
   if (loading) {
@@ -544,7 +539,7 @@ const AdminReportDetails: React.FC = () => {
               {/* Opção para Descartar Denúncia */}
               {report.status === ReportStatus.OPEN && (
                 <ActionButton
-                  onClick={() => handleUpdateStatus(ReportStatus.FINISHED)}
+                  onClick={handleDismissReport}
                   $variant="secondary"
                 >
                   <FiXCircle size={18} /> Descartar Denúncia
