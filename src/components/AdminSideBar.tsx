@@ -27,7 +27,7 @@ const menuItems = [
   { name: "Home", path: "/admin", icon: <FiHome size={25} /> },
   { name: "Usuários", path: "/admin/users", icon: <FiUser size={25} /> },
   { name: "Grupos", path: "/admin/groups", icon: <FiUsers size={25} /> },
-  { name: "Denúncias", path: "#", icon: <FiAlertOctagon size={25} /> },
+  { name: "Denúncias", path: "/admin/reports", icon: <FiAlertOctagon size={25} /> },
   { name: "Feedbacks", path: "#", icon: <FiMessageCircle size={25} /> },
   { name: "Configurações", path: "#", icon: <FiSettings size={25} /> },
 ];

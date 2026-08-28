@@ -1,4 +1,4 @@
-import { FriendsStates, ParticipantRoles, ParticipantStates } from "./enums";
+import { FriendsStates, ParticipantRoles, ParticipantStates, ReportStatus, ReportToType, ReportType } from "./enums";
 
 export interface UserData {
   id: string;
@@ -171,3 +171,23 @@ export interface IDashboardData {
     subscriptions: number;
   };
 }
+
+export interface IReport {
+  id: string;
+  report_type: ReportType;
+  status: ReportStatus;
+  report_to_type: ReportToType;
+  from_user_id: string;
+  message?: string;
+  to_message_id?: string;
+  to_user_id?: string;
+  to_group_id?: string;
+  from_user: UserData;
+  to_user?: UserData;
+  to_group?: GroupData;
+  to_message?: MessageData;
+  created_at: Date;
+  updated_at: Date;
+}
+export { ReportStatus, ReportToType };
+
