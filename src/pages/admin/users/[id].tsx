@@ -19,15 +19,17 @@ import {
   UserDetailsSection,
 } from "@styles/pages/admin/userDetails";
 import {
+  FiAlertOctagon,
   FiAlertTriangle,
   FiArrowLeft,
+  FiEye,
   FiKey,
   FiShieldOff,
   FiTrash2,
   FiUserCheck,
   FiUserX,
 } from "react-icons/fi";
-import { UserData } from "@_types/interfaces";
+import { UserData, IReport } from "@_types/interfaces";
 import { api } from "@services/api";
 import { useAdminAuth } from "@hooks/useAdminAuth";
 
@@ -72,6 +74,7 @@ const AdminUserDetails: React.FC = () => {
   const [newPassword, setNewPassword] = useState("");
   const [user, setUser] = useState<UserData>();
   const [penalties, setPenalties] = useState<IPenalty[]>([]);
+  const [reports, setReports] = useState<IReport[]>([]);
 
   const isSelf = String(currentUser?.id) === String(user?.id);
   const isAdmin = user?.type === "ADMIN";
@@ -86,6 +89,20 @@ const AdminUserDetails: React.FC = () => {
       setPenalties(data);
     } catch (error) {
       console.error("Erro ao buscar punições:", error);
+    }
+  }, []);
+
+  const fetchReports = useCallback(async (userId: string) => {
+    try {
+      const { data } = await api.get<{ reports: IReport[]; total: number }>(
+        `/admin/reports`,
+        {
+          params: { user_id: userId },
+        },
+      );
+      setReports(data.reports || []);
+    } catch (error) {
+      console.error("Erro ao buscar denúncias:", error);
     }
   }, []);
 
@@ -193,12 +210,13 @@ const AdminUserDetails: React.FC = () => {
         if (status === 200) {
           setUser(data);
           fetchPenalties(String(id));
+          fetchReports(String(id));
         }
       } catch (error) {
         console.error("Erro ao buscar dados do usuário:", error);
       }
     })();
-  }, [id, fetchPenalties]);
+  }, [id, fetchPenalties, fetchReports]);
 
   const getPenaltyLabel = (type: PenaltyType) => {
     switch (type) {
@@ -276,6 +294,121 @@ const AdminUserDetails: React.FC = () => {
                 <p>{isAdmin ? "Administrador" : "Usuário Comum"}</p>
               </InfoGroup>
             </InfoGrid>
+          </UserDetailsSection>
+
+          {/* NOVO CARD: Denúncias Recebidas */}
+          <UserDetailsSection>
+            <h2>Denúncias Recebidas ({reports.length})</h2>
+            {reports.length === 0 ? (
+              <p style={{ opacity: 0.7, fontStyle: "italic" }}>
+                Nenhuma denúncia registrada contra este usuário.
+              </p>
+            ) : (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1rem",
+                }}
+              >
+                {reports.map((report) => (
+                  <div
+                    key={report.id}
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      padding: "1rem 1.2rem",
+                      borderRadius: "8px",
+                      border: "1px solid rgba(0, 0, 0, 0.1)",
+                      backgroundColor: "rgba(237, 108, 2, 0.05)",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "0.3rem",
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "0.5rem",
+                        }}
+                      >
+                        <FiAlertOctagon size={16} color="#ed6c02" />
+                        <strong>{report.report_type}</strong>
+                        <span
+                          style={{
+                            fontSize: "0.75rem",
+                            backgroundColor: "#ddd",
+                            padding: "2px 8px",
+                            borderRadius: "12px",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          {report.status}
+                        </span>
+                      </div>
+
+                      {report.message && (
+                        <p style={{ fontSize: "0.95rem" }}>
+                          "{report.message}"
+                        </p>
+                      )}
+
+                      <div
+                        style={{
+                          display: "flex",
+                          flexWrap: "wrap",
+                          gap: "1rem",
+                          fontSize: "0.8rem",
+                          opacity: 0.75,
+                          marginTop: "0.2rem",
+                        }}
+                      >
+                        <span>
+                          Enviada em:{" "}
+                          {new Date(report.created_at).toLocaleString("pt-BR")}
+                        </span>
+                        <span>
+                          Por:{" "}
+                          <Link
+                            href={`/admin/users/${report.from_user_id}`}
+                            style={{
+                              fontWeight: "bold",
+                              color: "inherit",
+                              textDecoration: "underline",
+                            }}
+                          >
+                            @{report.from_user?.nickname || report.from_user_id}
+                          </Link>
+                        </span>
+                      </div>
+                    </div>
+
+                    <Link
+                      href={`/admin/reports/${report.id}`}
+                      passHref
+                      legacyBehavior
+                    >
+                      <ActionButton
+                        $variant="primary"
+                        style={{
+                          padding: "0.5rem 0.8rem",
+                          fontSize: "0.85rem",
+                        }}
+                        title="Ver detalhes da denúncia"
+                      >
+                        <FiEye size={14} /> Detalhes
+                      </ActionButton>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            )}
           </UserDetailsSection>
 
           <UserDetailsSection>
