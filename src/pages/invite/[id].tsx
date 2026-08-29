@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
@@ -14,6 +14,8 @@ import { api } from "../../services/api";
 import { InviteData } from "@_types/interfaces";
 
 const Invite: React.FC<{ invite: InviteData }> = ({ invite }) => {
+  const appDeepLink = `saturnchat://invite/${invite?.id}`;
+
   return (
     <>
       <Head>
@@ -53,8 +55,15 @@ const Invite: React.FC<{ invite: InviteData }> = ({ invite }) => {
               </GroupAvatarContainer>
               <GroupInfosContainer>
                 <h1>{invite.group.name}</h1>
+
+                <a href={appDeepLink} className="open_app_button">
+                  Já tenho o app (Abrir no Saturn)
+                </a>
+
                 <Link passHref href="/download">
-                  <a>Baixe o app e aceite o convite</a>
+                  <a className="download_button">
+                    Baixe o app e aceite o convite
+                  </a>
                 </Link>
               </GroupInfosContainer>
             </>
@@ -82,7 +91,7 @@ const Invite: React.FC<{ invite: InviteData }> = ({ invite }) => {
         </InviteCard>
         {invite && (
           <p id="app_warning">
-            Caso já tenha o app, certifique-se de abrir o convite diretamente
+            Caso já tenha o app, você também pode abrir o convite diretamente
             por ele.
           </p>
         )}
@@ -103,7 +112,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   } catch (error) {
     return {
       props: {
-        Invite: null,
+        invite: null,
       },
     };
   }
