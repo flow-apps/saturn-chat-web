@@ -33,7 +33,7 @@ const menuItems = [
     path: "/admin/reports",
     icon: <FiAlertOctagon size={25} />,
   },
-  { name: "Feedbacks", path: "#", icon: <FiMessageCircle size={25} /> },
+  { name: "Feedbacks", path: "/admin/feedbacks", icon: <FiMessageCircle size={25} /> },
   { name: "Configurações", path: "#", icon: <FiSettings size={25} /> },
 ];
 

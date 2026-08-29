@@ -1,4 +1,4 @@
-import { FriendsStates, ParticipantRoles, ParticipantStates, ReportStatus, ReportToType, ReportType } from "./enums";
+import { FeedbackType, FriendsStates, ParticipantRoles, ParticipantStates, ReportStatus, ReportToType, ReportType } from "./enums";
 
 export interface UserData {
   id: string;
@@ -189,5 +189,16 @@ export interface IReport {
   created_at: Date;
   updated_at: Date;
 }
+
+export interface IFeedback {
+  id: string;
+  user_id: string;
+  type: FeedbackType;
+  user?: UserData;
+  content: string;
+  created_at: Date | string;
+  updated_at: Date | string;
+}
+
 export { ReportStatus, ReportToType };
 
