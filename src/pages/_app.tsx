@@ -3,7 +3,7 @@ import Head from "next/head";
 import type { AppProps } from "next/app";
 import { GlobalStyle } from "@styles/global";
 import { ThemeProvider } from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeChooseContext } from "@hooks/useTheme";
 import LightTheme from "@styles/themes/light";
 import BlackTheme from "@styles/themes/dark";
@@ -12,6 +12,13 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
 import { useRouter } from "next/router";
 import { messages, type Locale } from "../locales";
+
+const browserLocaleByCode: Record<string, Locale> = {
+  en: "en",
+  hi: "hi",
+  fr: "fr",
+  es: "es",
+};
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -23,7 +30,29 @@ function MyApp({ Component, pageProps }: AppProps) {
     fr: "fr",
     es: "es",
   };
-  const locale = localeByRouterLocale[router.locale ?? ""] ?? "en";
+  const locale = localeByRouterLocale[router.locale ?? ""] ?? "pt-BR";
+
+  useEffect(() => {
+    if (!router.isReady || typeof navigator === "undefined") return;
+    if (document.cookie.includes("NEXT_LOCALE=")) return;
+    if (router.locale !== router.defaultLocale) return;
+
+    const browserLocales = navigator.languages?.length
+      ? navigator.languages
+      : [navigator.language];
+    const detectedLocale = browserLocales
+      .map((browserLocale) => browserLocale.toLowerCase().split("-")[0])
+      .map((browserLocale) =>
+        browserLocale === "pt"
+          ? "pt-BR"
+          : browserLocaleByCode[browserLocale] ?? null,
+      )
+      .find((browserLocale): browserLocale is Locale => browserLocale !== null);
+
+    if (detectedLocale && detectedLocale !== locale) {
+      router.replace(router.asPath, router.asPath, { locale: detectedLocale });
+    }
+  }, [locale, router]);
 
   const changeTheme = () => {
     const expression = currentTheme.title === "light" ? BlackTheme : LightTheme;
