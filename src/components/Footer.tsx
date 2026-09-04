@@ -4,17 +4,19 @@ import { FiInstagram, FiYoutube } from "react-icons/fi";
 
 import { Container } from "@styles/components/footer";
 import { useChooseTheme } from "@hooks/useTheme";
+import { useTranslations } from "next-intl";
 
 const Footer: React.FC = () => {
+  const t = useTranslations("Footer");
   const SocialNetworks = [
     {
       Path: "https://www.instagram.com/saturn_chat/",
-      Text: "Acessar Instagram do Saturn Chat",
+      Text: t("instagram"),
       Icon: FiInstagram,
     },
     {
       Path: "https://www.youtube.com/gamesantos",
-      Text: "Acessar YouTube do criador do Saturn Chat",
+      Text: t("youtube"),
       Icon: FiYoutube,
     },
   ];
@@ -22,11 +24,11 @@ const Footer: React.FC = () => {
   const Policies = [
     {
       Path: "/privacy",
-      Text: "Política de Privacidade",
+      Text: t("privacy"),
     },
     {
       Path: "/guidelines",
-      Text: "Diretrízes da comunidade",
+      Text: t("guidelines"),
     },
   ];
 
@@ -60,7 +62,7 @@ const Footer: React.FC = () => {
         })}
       </div>
       <p id="copyright">
-        &copy; {new Date().getFullYear()} Todos os direitos reservados
+        &copy; {new Date().getFullYear()} {t("copyright")}
       </p>
     </Container>
   );

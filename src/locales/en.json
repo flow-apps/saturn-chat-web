@@ -11,6 +11,130 @@
     "menuClose": "Close side menu",
     "logoAlt": "Saturn Chat icon"
   },
+  "Footer": {
+    "instagram": "Visit Saturn Chat on Instagram",
+    "youtube": "Visit the Saturn Chat creator on YouTube",
+    "privacy": "Privacy Policy",
+    "guidelines": "Community Guidelines",
+    "copyright": "All rights reserved"
+  },
+  "Guidelines": {
+    "meta": {
+      "title": "Community Guidelines | Saturn Chat",
+      "description": "Learn about the Saturn Chat community rules. Following them is essential for a safe experience for everyone."
+    },
+    "title": "Saturn Chat Community Guidelines",
+    "updated": "Last updated: September 4, 2026",
+    "intro": [
+      "Saturn Chat was created to connect people through a simple, accessible, and safe platform for everyone.",
+      "These guidelines define the behaviors and content that are not allowed on Saturn Chat. Violations may result in measures ranging from content removal to permanent account suspension.",
+      "We rely on every user to help maintain a healthy environment. If you identify a violation, please use our reporting channels."
+    ],
+    "interactionTitle": "How to Interact with Other Users",
+    "serviceTitle": "Content and Use of the Service",
+    "rules": [
+      {"title": "Do not promote or encourage harassment", "body": "Disagreements are part of social interaction, but verbal abuse, targeted insults, threats, or intimidation are not tolerated."},
+      {"title": "Do not spread hate speech", "body": "We do not allow attacks or discrimination based on race, ethnicity, nationality, gender, sexual orientation, religion, or physical or mental disabilities."},
+      {"title": "Do not make threats or blackmail others", "body": "Threatening users or exposing their personal information, such as email, phone number, address, or photos, without permission is strictly prohibited."},
+      {"title": "Do not impersonate another person", "body": "Creating fake profiles to impersonate individuals, brands, public figures, or Saturn Chat team members is prohibited."},
+      {"title": "Do not run scams or financial fraud", "body": "You may not use the platform to promote pyramid schemes, investment fraud, or request other users' banking details and passwords."},
+      {"title": "Do not send malicious code or suspicious links", "body": "Hacking attempts, virus or malware distribution, phishing, and denial-of-service attacks (DDoS) are prohibited."},
+      {"title": "Zero tolerance for child exploitation", "body": "Sharing or requesting sexual content involving minors is strictly prohibited, including links, digitally altered media, or suggestive material."},
+      {"title": "Do not promote self-harm or suicide", "body": "Encouraging, glorifying, or providing instructions for self-harm, suicide, or eating disorders is not allowed. Seek professional support if you are going through a difficult time."},
+      {"title": "Do not trade illegal or regulated products", "body": "Using Saturn Chat to trade firearms, illegal drugs, controlled medication, ammunition, or other restricted products is prohibited."},
+      {"title": "Do not distribute pirated or hacking material", "body": "Do not share leaked data, cracked software, hacking tools, stolen accounts, or game cheats."},
+      {"title": "Respect copyright and intellectual property", "body": "Do not share content that violates patents, trademarks, or third-party copyrights without proper legal authorization."},
+      {"title": "Respect other people's privacy", "body": "Sharing intimate images or videos without the consent of those involved, including revenge porn or intimidation, is a serious violation."},
+      {"title": "Do not send spam or use unauthorized automation", "body": "Repeated messages, unsolicited affiliate links, mass account creation, or unauthorized scraping bots harm the community and are prohibited."},
+      {"title": "Do not exploit vulnerabilities or overload systems", "body": "If you find a bug or vulnerability in Saturn Chat, report it to our team instead of exploiting or sharing it to harm service stability."}
+    ],
+    "outro": "Following these guidelines helps keep Saturn Chat a healthy and safe place for everyone."
+  },
+  "Privacy": {
+    "meta": {
+      "title": "Privacy Policy | Saturn Chat",
+      "description": "We take your privacy seriously. Learn how we use your data on Saturn Chat."
+    },
+    "title": "Privacy Policy",
+    "updated": "Last updated: September 4, 2026",
+    "interpretation": {
+      "title": "Interpretation and Definitions",
+      "subtitle": "Interpretation",
+      "body": "Capitalized words have specific meanings defined below. The definitions have the same meaning in the singular and plural."
+    },
+    "definitions": {
+      "title": "Definitions",
+      "intro": "For the purposes of this Privacy Policy:",
+      "0": {"term": "Account", "body": "a unique account created for you to access our Service or parts of it."},
+      "1": {"term": "Affiliate", "body": "an entity that controls, is controlled by, or is under common control with a party; control means owning 50% or more of shares, equity, or voting rights."},
+      "2": {"term": "Application", "body": "Saturn Chat, the software program provided by the Company."},
+      "3": {"term": "Company", "body": "Saturn Chat, also referred to as the Company, We, Us, or Our in this Agreement."},
+      "4": {"term": "Country", "body": "Brazil."},
+      "5": {"term": "Device", "body": "any device that can access the Service, such as a computer, phone, or tablet."},
+      "6": {"term": "Personal Data", "body": "any information related to an identified or identifiable individual."},
+      "7": {"term": "Service", "body": "the Application."},
+      "8": {"term": "Service Provider", "body": "any person or entity that processes data on behalf of the Company, including third parties that help provide or analyze the Service."},
+      "9": {"term": "Usage Data", "body": "information collected automatically through use of the Service or its infrastructure, such as access logs and diagnostics."},
+      "10": {"term": "You", "body": "the individual accessing or using the Service, or the entity on whose behalf they do so."}
+    },
+    "collection": {
+      "title": "Collection and Use of Your Personal Data",
+      "types": "Types of Data Collected"
+    },
+    "personal": {
+      "title": "Personal Data",
+      "intro": "When using our Service, we may ask you to provide personally identifiable information to contact or identify you. This may include:",
+      "items": ["Email address", "Name and profile picture", "Usage Data"]
+    },
+    "media": {
+      "title": "Messages, Audio, and Media Files",
+      "intro": "Because Saturn Chat is a communication app, we process transmitted content to enable real-time messaging:",
+      "items": [{"term": "Data in Transit", "body": "message, audio, and file content is transferred using secure protocols with encryption in transit (TLS/HTTPS)."}, {"term": "Storage", "body": "messages and media are stored on our servers or cloud infrastructure providers' servers to ensure delivery and synchronization across devices."}]
+    },
+    "usageData": {
+      "title": "Usage Data",
+      "0": "Usage Data is collected automatically when you use the Service.",
+      "1": "It may include your IP address, operating system, device identifiers, error logs, connection times, and other technical diagnostics."
+    },
+    "permissions": {
+      "title": "Device Permissions and Access",
+      "intro": "Some features may require authorization for the following access:",
+      "items": [{"term": "Camera and Photo Gallery", "body": "to send photos and videos and select a profile picture."}, {"term": "Microphone", "body": "to record and send audio messages in conversations."}, {"term": "Push Notifications", "body": "to alert you about new messages and status updates."}],
+      "outro": "You can grant or revoke these permissions at any time in your device privacy settings."
+    },
+    "use": {
+      "title": "Use of Your Personal Data",
+      "intro": "The Company may use Personal Data for the following purposes:",
+      "items": [{"term": "Provide and maintain the Service", "body": "including message delivery, notifications, and real-time content transmission."}, {"term": "Manage your Account", "body": "managing your registration and authentication as a Service user."}, {"term": "Security and abuse prevention", "body": "monitoring failures, preventing fraud, and protecting system stability."}, {"term": "Contact you", "body": "sending important notices about your account or Service updates."}, {"term": "Manage your requests", "body": "handling requests sent to our support team."}, {"term": "Other purposes", "body": "conducting aggregate analysis and improving the technical performance of the Application."}]
+    },
+    "retention": {
+      "title": "Data Retention and Deletion",
+      "0": "We retain Personal Data only as long as necessary to fulfill this Policy or legal obligations.",
+      "1": "You may request permanent deletion of your account and associated data at any time by contacting our support team."
+    },
+    "security": {
+      "title": "Security of Your Personal Data",
+      "body": "Protecting your Personal Data and communications is a priority. We use security standards and encryption, but no Internet transmission or electronic storage method is completely secure."
+    },
+    "rights": {
+      "title": "Your Privacy Rights",
+      "intro": "You may have specific rights regarding your personal information under applicable law:",
+      "items": ["Confirm whether your data is processed and request access to it;", "Request correction of incomplete or outdated data;", "Request anonymization, blocking, or deletion of unnecessary data;", "Withdraw your consent to data processing;", "Request permanent deletion of your account and data."]
+    },
+    "children": {
+      "title": "Children's Privacy",
+      "body": "Our Service is not directed to children under 13. We do not knowingly collect their personal information without consent from a parent or legal guardian."
+    },
+    "changes": {
+      "title": "Changes to This Privacy Policy",
+      "body": "We may update this Privacy Policy periodically. We will publish the new version on this page and update the Last updated date."
+    },
+    "contact": {
+      "title": "Contact",
+      "body": "If you have questions or want to exercise your privacy rights, contact us:",
+      "email": "By email: saturnchat1@gmail.com"
+    }
+  },
   "Home": {
     "title": "Connect with the world",
     "subtitle": "With Saturn Chat, you can connect with your school group, friends, or family while enjoying features that make conversations faster and more dynamic without compromising your privacy. Ready to start your journey?",

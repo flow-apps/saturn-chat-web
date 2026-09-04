@@ -34,7 +34,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeChooseContext.Provider
       value={{ changeTheme, currentTheme, setCurrentTheme }}
     >
-      <NextIntlClientProvider locale={locale} messages={messages[locale]}>
+      <NextIntlClientProvider
+        locale={locale}
+        messages={messages[locale]}
+        timeZone="America/Sao_Paulo"
+      >
         <ThemeProvider theme={currentTheme}>
           <GlobalStyle />
           <SpeedInsights />
