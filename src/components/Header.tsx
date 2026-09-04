@@ -15,12 +15,14 @@ import {
 } from "@styles/components/header";
 import { useTheme } from "styled-components";
 import { useChooseTheme } from "@hooks/useTheme";
+import { useTranslations } from "next-intl";
 
 interface HeaderProps {
   colorScheme?: "black" | "white";
 }
 
 const Header = ({ colorScheme }: HeaderProps) => {
+  const t = useTranslations("Header");
   const [hiddenNav, setHiddenNav] = useState(true);
 
   const theme = useTheme();
@@ -29,11 +31,11 @@ const Header = ({ colorScheme }: HeaderProps) => {
   const NavBarOptions = [
     {
       path: "/download",
-      text: "Baixar agora",
+      text: t("download"),
     },
     {
       path: "/star",
-      text: "Seja Star",
+      text: t("star"),
     },
   ];
 
@@ -47,7 +49,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
         <IconContainer colorScheme={colorScheme}>
           <Image
             src={icon}
-            alt="Ícone do Saturn Chat"
+            alt={t("logoAlt")}
             width={90}
             height={90}
             quality={60}
@@ -59,7 +61,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
       </Link>
       <OpenMenu
         colorScheme={colorScheme}
-        aria-label="Abrir menu lateral"
+        aria-label={hiddenNav ? t("menuOpen") : t("menuClose")}
         onClick={toggleMenu}
       >
         <FiMenu />
@@ -76,15 +78,15 @@ const Header = ({ colorScheme }: HeaderProps) => {
           <NavOption colorScheme={colorScheme}>
             {/* @ts-ignore */}
             <div onClick={changeTheme}>
-              {
-                theme.title === "light" ?
+              {theme.title === "light" ? (
                 <FiMoon
                   style={{
                     cursor: "pointer",
                     fontSize: 22,
                     color: theme.colors.primary,
                   }}
-                /> :
+                />
+              ) : (
                 <FiSun
                   style={{
                     cursor: "pointer",
@@ -92,7 +94,7 @@ const Header = ({ colorScheme }: HeaderProps) => {
                     color: theme.colors.secondary,
                   }}
                 />
-              }
+              )}
             </div>
           </NavOption>
 

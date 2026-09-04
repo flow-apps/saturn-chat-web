@@ -114,7 +114,7 @@ export default function Home() {
           <h3>{t("call_action")}</h3>
           <Link href="/download">
             <div>
-              <FiDownload fontSize={18} className="icon" /> {t("dowonload")}
+              <FiDownload fontSize={18} className="icon" /> {t("download")}
             </div>
           </Link>
         </GetAppContainer>

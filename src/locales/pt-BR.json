@@ -4,34 +4,41 @@
     "loading": "Carregando...",
     "language": "Idioma"
   },
+  "Header": {
+    "download": "Baixar agora",
+    "star": "Seja Star",
+    "menuOpen": "Abrir menu lateral",
+    "menuClose": "Fechar menu lateral",
+    "logoAlt": "Ícone do Saturn Chat"
+  },
   "Home": {
     "title": "Converse com o mundo",
-    "subtitle": "No Saturn Chat você consegue se unir ao seu grupo escolar, com seus amigos ou até mesmo com sua família, sempre aproveitando todos os recursos que tornam a conversa mais rápida, dinâmica e sempre mantendo sua privacidade. Que tal começar sua jornada agora?",
+    "subtitle": "No Saturn Chat, você pode se conectar ao seu grupo escolar, aos seus amigos ou até mesmo à sua família, aproveitando todos os recursos que tornam as conversas mais rápidas e dinâmicas, sem abrir mão da sua privacidade. Que tal começar sua jornada agora?",
     "sections": {
       "0": {
-        "title": "Crie sua comunidade e começe a interagir!",
-        "subtitle": "Os grupos do Saturn Chat são preparados para receber quantas pessoas você precisar. Com poucos toques você já cria seu grupo e já pode convidar toda sua comunidade, através de convites personalizáveis e totalmente controláveis por você."
+        "title": "Crie sua comunidade e comece a interagir!",
+        "subtitle": "Os grupos do Saturn Chat são preparados para receber quantas pessoas você precisar. Com poucos toques, você cria seu grupo e pode convidar toda a sua comunidade por meio de convites personalizáveis e totalmente controláveis por você."
       },
       "1": {
-        "title": "Seja encontrado, ou fique no seu cantinho privado",
-        "subtitle": "Você pode escolher entre criar grupos públicos, onde você pode ser encontrado nas buscas no Saturn Chat e qualquer pessoa pode entrar. Você também pode criar grupos privados, que não podem ser encontrados e onde só podem entrar pessoas que tiverem seu convite."
+        "title": "Seja encontrado ou fique no seu cantinho privado",
+        "subtitle": "Você pode escolher entre criar grupos públicos, nos quais pode ser encontrado nas buscas do Saturn Chat e qualquer pessoa pode entrar. Também pode criar grupos privados, que não aparecem nas buscas e nos quais só podem entrar pessoas que receberam um convite."
       },
       "2": {
         "title": "Simples para todos",
-        "subtitle": "No Saturn Chat, você não se sente perdido com tantos botões. Temos uma interface simples, porém poderosa, para que em pouquíssimos toques você já tenha um grupo totalmente configurado e prontinho receber seus usuários com muito conforto e segurança."
+        "subtitle": "No Saturn Chat, você não se perde entre tantos botões. Temos uma interface simples, porém poderosa, para que, em pouquíssimos toques, você tenha um grupo totalmente configurado e prontinho para receber seus usuários com conforto e segurança."
       },
       "3": {
         "title": "Rápido, fácil e seguro",
-        "subtitle": "Com o Saturn Chat, você tem a garantia que vai ter um aplicativo rápido na maioria dos dispositivos, com baixa latência e sem riscos de segurança no envio de mensagens e bem leve."
+        "subtitle": "Com o Saturn Chat, você tem a garantia de um aplicativo rápido na maioria dos dispositivos, com baixa latência, envio de mensagens seguro e pouco consumo de recursos."
       }
     },
     "call_action": "Que tal começar agora?",
     "download": "Baixar agora"
   },
   "Download": {
-    "title": "Escolha seu dispositivo e comece agora a diversão",
-    "subtitle": "Uma grande jornada te aguarda. Para isso, basta baixar o Saturn Chat em seu dispositivo",
-    "unsupported": "No momento, o aplicativo não é suportado nesse aparelho. Veja as plataformas suportadas abaixo",
+    "title": "Escolha seu dispositivo e comece a diversão agora",
+    "subtitle": "Uma grande jornada espera por você. Basta baixar o Saturn Chat no seu dispositivo.",
+    "unsupported": "No momento, o aplicativo não é compatível com este aparelho. Veja abaixo as plataformas compatíveis.",
     "soon": "Em breve no seu dispositivo",
     "soon_2": "Em breve",
     "download_playstore": "Baixar na Play Store",

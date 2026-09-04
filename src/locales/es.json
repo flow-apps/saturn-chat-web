@@ -3,5 +3,45 @@
     "appName": "Saturn Chat",
     "loading": "Cargando...",
     "language": "Idioma"
+  },
+  "Header": {
+    "download": "Descargar ahora",
+    "star": "Hazte Star",
+    "menuOpen": "Abrir menú lateral",
+    "menuClose": "Cerrar menú lateral",
+    "logoAlt": "Icono de Saturn Chat"
+  },
+  "Home": {
+    "title": "Conéctate con el mundo",
+    "subtitle": "Con Saturn Chat, puedes conectarte con tu grupo escolar, tus amigos o tu familia y disfrutar de funciones que hacen que las conversaciones sean más rápidas y dinámicas, sin renunciar a tu privacidad. ¿Listo para comenzar tu aventura?",
+    "sections": {
+      "0": {
+        "title": "¡Crea tu comunidad y empieza a conectar!",
+        "subtitle": "Los grupos de Saturn Chat están preparados para recibir a todas las personas que necesites. Con unos pocos toques, puedes crear tu grupo e invitar a toda tu comunidad mediante invitaciones personalizables que controlas por completo."
+      },
+      "1": {
+        "title": "Déjate encontrar o mantén tu espacio privado",
+        "subtitle": "Puedes crear grupos públicos que aparezcan en las búsquedas de Saturn Chat y permitan que cualquiera se una. También puedes crear grupos privados que no aparezcan en las búsquedas y a los que solo puedan acceder las personas que reciban una invitación."
+      },
+      "2": {
+        "title": "Sencillo para todos",
+        "subtitle": "Con Saturn Chat, no te perderás entre tantos botones. Nuestra interfaz es sencilla, pero potente, para que puedas configurar por completo un grupo en pocos toques y recibir a tus usuarios con comodidad y seguridad."
+      },
+      "3": {
+        "title": "Rápido, fácil y seguro",
+        "subtitle": "Saturn Chat te ofrece una aplicación rápida que funciona bien en la mayoría de los dispositivos, con baja latencia, envío seguro de mensajes y un consumo reducido de recursos."
+      }
+    },
+    "call_action": "¿Por qué no empezar ahora?",
+    "download": "Descargar ahora"
+  },
+  "Download": {
+    "title": "Elige tu dispositivo y empieza a disfrutar",
+    "subtitle": "Te espera una gran aventura. Solo tienes que descargar Saturn Chat en tu dispositivo.",
+    "unsupported": "La aplicación no es compatible con este dispositivo por el momento. Consulta las plataformas compatibles a continuación.",
+    "soon": "Próximamente en tu dispositivo",
+    "soon_2": "Próximamente",
+    "download_playstore": "Descargar desde Google Play",
+    "download_now": "Descargar ahora"
   }
 }

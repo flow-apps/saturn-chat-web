@@ -3,5 +3,45 @@
     "appName": "Saturn Chat",
     "loading": "Loading...",
     "language": "Language"
+  },
+  "Header": {
+    "download": "Download now",
+    "star": "Become a Star",
+    "menuOpen": "Open side menu",
+    "menuClose": "Close side menu",
+    "logoAlt": "Saturn Chat icon"
+  },
+  "Home": {
+    "title": "Connect with the world",
+    "subtitle": "With Saturn Chat, you can connect with your school group, friends, or family while enjoying features that make conversations faster and more dynamic without compromising your privacy. Ready to start your journey?",
+    "sections": {
+      "0": {
+        "title": "Create your community and start connecting!",
+        "subtitle": "Saturn Chat groups are ready to welcome as many people as you need. With just a few taps, you can create your group and invite your entire community with customizable invitations that you fully control."
+      },
+      "1": {
+        "title": "Be discoverable or keep your private space",
+        "subtitle": "You can create public groups that appear in Saturn Chat searches and allow anyone to join. You can also create private groups that do not appear in searches and can only be joined by people who receive an invitation."
+      },
+      "2": {
+        "title": "Simple for everyone",
+        "subtitle": "With Saturn Chat, you will not feel overwhelmed by endless buttons. Our interface is simple yet powerful, so you can fully configure a group in just a few taps and welcome your users comfortably and securely."
+      },
+      "3": {
+        "title": "Fast, easy, and secure",
+        "subtitle": "Saturn Chat gives you a fast app that works well on most devices, with low latency, secure message delivery, and low resource usage."
+      }
+    },
+    "call_action": "Why not get started now?",
+    "download": "Download now"
+  },
+  "Download": {
+    "title": "Choose your device and start having fun",
+    "subtitle": "An exciting journey is waiting for you. Just download Saturn Chat on your device.",
+    "unsupported": "The app is not currently supported on this device. See the supported platforms below.",
+    "soon": "Coming soon to your device",
+    "soon_2": "Coming soon",
+    "download_playstore": "Download from the Play Store",
+    "download_now": "Download now"
   }
 }
