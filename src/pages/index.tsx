@@ -10,11 +10,13 @@ import {
   WelcomeContainer,
   WelcomeContentContainer,
 } from "@styles/pages/home";
-import { FaApple, FaAndroid } from "react-icons/fa";
+import { FaAndroid } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
-import { randInt } from "../utils/random";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("Home");
+
   return (
     <>
       <Head>
@@ -37,14 +39,8 @@ export default function Home() {
           <Header />
           <WelcomeContentContainer>
             <div className="welcome_content">
-              <h1>Converse com o mundo.</h1>
-              <p>
-                No Saturn Chat você consegue se unir ao seu grupo escolar, com
-                seus amigos ou até mesmo com sua família, sempre aproveitando
-                todos os recursos que tornam a conversa mais rápida, dinâmica e
-                sempre mantendo sua privacidade. Que tal começar sua jornada
-                agora?
-              </p>
+              <h1>{t("title")}</h1>
+              <p>{t("subtitle")}</p>
               <div className="download_buttons_container">
                 <Link href="https://play.google.com/store/apps/details?id=com.flowapps.saturnchat">
                   <div className="download_button android">
@@ -70,13 +66,8 @@ export default function Home() {
               />
             </div>
             <div className="content_container">
-              <h2>Crie sua comunidade e começe a interagir!</h2>
-              <p>
-                Os grupos do Saturn Chat são preparados para receber quantas
-                pessoas você precisar. Com poucos toques você já cria seu grupo
-                e já pode convidar toda sua comunidade, através de convites
-                personalizáveis e totalmente controláveis por você.
-              </p>
+              <h2>{t("sections.0.title")}</h2>
+              <p>{t("sections.0.subtitle")}</p>
             </div>
           </div>
           <div className="presentation_container">
@@ -88,14 +79,8 @@ export default function Home() {
               />
             </div>
             <div className="content_container">
-              <h2>Seja encontrado, ou fique no seu cantinho privado.</h2>
-              <p>
-                Você pode escolher entre criar grupos públicos, onde você pode
-                ser encontrado nas buscas no Saturn Chat (incluindo as buscas do
-                Google também!) e qualquer pessoa pode entrar. Você também pode
-                criar grupos privados, que não podem ser encontrados e onde só
-                podem entrar pessoas que tiverem seu convite.
-              </p>
+              <h2>{t("sections.1.title")}</h2>
+              <p>{t("sections.1.subtitle")}</p>
             </div>
           </div>
           <div className="presentation_container">
@@ -107,14 +92,8 @@ export default function Home() {
               />
             </div>
             <div className="content_container">
-              <h2>Simples para todos.</h2>
-              <p>
-                No Saturn Chat, você não se sente perdido com tantos botões.
-                Temos uma interface simples, porém poderosa, para que em
-                pouquíssimos toques você já tenha um grupo totalmente
-                configurado e prontinho receber seus usuários com muito conforto
-                e segurança.
-              </p>
+              <h2>{t("sections.2.title")}</h2>
+              <p>{t("sections.2.subtitle")}</p>
             </div>
           </div>
           <div className="presentation_container">
@@ -126,20 +105,16 @@ export default function Home() {
               />
             </div>
             <div className="content_container">
-              <h2>Rápido, fácil e seguro.</h2>
-              <p>
-                Com o Saturn Chat, você tem a garantia que vai ter um aplicativo
-                rápido na maioria dos dispositivos, com baixa latência e sem
-                riscos de segurança no envio de mensagens e bem leve.
-              </p>
+              <h2>{t("sections.3.title")}</h2>
+              <p>{t("sections.3.subtitle")}</p>
             </div>
           </div>
         </PresentationsContainer>
         <GetAppContainer>
-          <h3>Que tal começar agora?</h3>
+          <h3>{t("call_action")}</h3>
           <Link href="/download">
             <div>
-              <FiDownload fontSize={18} className="icon" /> Baixe agora
+              <FiDownload fontSize={18} className="icon" /> {t("dowonload")}
             </div>
           </Link>
         </GetAppContainer>

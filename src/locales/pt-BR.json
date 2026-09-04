@@ -3,5 +3,29 @@
     "appName": "Saturn Chat",
     "loading": "Carregando...",
     "language": "Idioma"
+  },
+  "Home": {
+    "title": "Converse com o mundo",
+    "subtitle": "No Saturn Chat você consegue se unir ao seu grupo escolar, com seus amigos ou até mesmo com sua família, sempre aproveitando todos os recursos que tornam a conversa mais rápida, dinâmica e sempre mantendo sua privacidade. Que tal começar sua jornada agora?",
+    "sections": {
+      "0": {
+        "title": "Crie sua comunidade e começe a interagir!",
+        "subtitle": "Os grupos do Saturn Chat são preparados para receber quantas pessoas você precisar. Com poucos toques você já cria seu grupo e já pode convidar toda sua comunidade, através de convites personalizáveis e totalmente controláveis por você."
+      },
+      "1": {
+        "title": "Seja encontrado, ou fique no seu cantinho privado",
+        "subtitle": "Você pode escolher entre criar grupos públicos, onde você pode ser encontrado nas buscas no Saturn Chat e qualquer pessoa pode entrar. Você também pode criar grupos privados, que não podem ser encontrados e onde só podem entrar pessoas que tiverem seu convite."
+      },
+      "2": {
+        "title": "Simples para todos",
+        "subtitle": "No Saturn Chat, você não se sente perdido com tantos botões. Temos uma interface simples, porém poderosa, para que em pouquíssimos toques você já tenha um grupo totalmente configurado e prontinho receber seus usuários com muito conforto e segurança."
+      },
+      "3": {
+        "title": "Rápido, fácil e seguro",
+        "subtitle": "Com o Saturn Chat, você tem a garantia que vai ter um aplicativo rápido na maioria dos dispositivos, com baixa latência e sem riscos de segurança no envio de mensagens e bem leve."
+      }
+    },
+    "call_action": "Que tal começar agora?",
+    "download": "Baixar agora"
   }
 }
