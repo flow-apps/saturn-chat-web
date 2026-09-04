@@ -1,5 +1,9 @@
 module.exports = {
   reactStrictMode: true,
+  i18n: {
+    locales: ['pt-BR', 'en', 'hi', 'fr', 'es'],
+    defaultLocale: 'pt-BR',
+  },
   async headers() {
     return [
       {

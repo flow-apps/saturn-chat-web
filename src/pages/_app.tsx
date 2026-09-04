@@ -9,9 +9,21 @@ import LightTheme from "@styles/themes/light";
 import BlackTheme from "@styles/themes/dark";
 import { ThemeType } from "@_types/styled.theme";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { NextIntlClientProvider } from "next-intl";
+import { useRouter } from "next/router";
+import { messages, type Locale } from "../locales";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
   const [currentTheme, setCurrentTheme] = useState<ThemeType>(LightTheme);
+  const localeByRouterLocale: Record<string, Locale> = {
+    en: "en",
+    "pt-BR": "pt-BR",
+    hi: "hi",
+    fr: "fr",
+    es: "es",
+  };
+  const locale = localeByRouterLocale[router.locale ?? ""] ?? "pt-BR";
 
   const changeTheme = () => {
     const expression = currentTheme.title === "light" ? BlackTheme : LightTheme;
@@ -22,37 +34,39 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeChooseContext.Provider
       value={{ changeTheme, currentTheme, setCurrentTheme }}
     >
-      <ThemeProvider theme={currentTheme}>
-        <GlobalStyle />
-        <SpeedInsights />
-        <Head>
-          <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="Saturn Chat" />
-          <meta
-            name="keywords"
-            content="saturn chat, chat online, mobile chat, voice chat, chat for gamers, chat para jogar, chat para gamers, aplicativo grátis de conversa online, batepapo online"
-          />
-          <meta
-            name="og:keywords"
-            content="saturn chat, chat online, mobile chat, voice chat, chat for gamers, chat para jogar, chat para gamers, aplicativo grátis de conversa online, batepapo online"
-          />
-          <meta
-            name="google-site-verification"
-            content="QknoFbNAM4A4QAmJVKJvaMROn2gasuAII8y7Q_8XRls"
-          />
-          <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-          <link
-            rel="preconnect"
-            href="https://fonts.googleapis.com"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-          />
-        </Head>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <NextIntlClientProvider locale={locale} messages={messages[locale]}>
+        <ThemeProvider theme={currentTheme}>
+          <GlobalStyle />
+          <SpeedInsights />
+          <Head>
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="Saturn Chat" />
+            <meta
+              name="keywords"
+              content="saturn chat, chat online, mobile chat, voice chat, chat for gamers, chat para jogar, chat para gamers, aplicativo grátis de conversa online, batepapo online"
+            />
+            <meta
+              name="og:keywords"
+              content="saturn chat, chat online, mobile chat, voice chat, chat for gamers, chat para jogar, chat para gamers, aplicativo grátis de conversa online, batepapo online"
+            />
+            <meta
+              name="google-site-verification"
+              content="QknoFbNAM4A4QAmJVKJvaMROn2gasuAII8y7Q_8XRls"
+            />
+            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+            <link
+              rel="preconnect"
+              href="https://fonts.googleapis.com"
+              crossOrigin="anonymous"
+            />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+            />
+          </Head>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </NextIntlClientProvider>
     </ThemeChooseContext.Provider>
   );
 }
