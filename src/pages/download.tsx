@@ -5,14 +5,20 @@ import Footer from "@component/Footer";
 import Image from "next/image";
 
 import { FiDownload } from "react-icons/fi";
-import { Container, DownloadsContainer, PresentationContainer } from "@styles/pages/download";
+import {
+  Container,
+  DownloadsContainer,
+  PresentationContainer,
+} from "@styles/pages/download";
 import { isAndroid, isIOS } from "react-device-detect";
 
 import downloadMobileImg from "../../public/assets/download-mobile.svg";
 import appAndroidImg from "../../public/assets/app-android.png";
 import appIosImg from "../../public/assets/app-ios.png";
+import { useTranslations } from "next-intl";
 
 const Download: React.FC = () => {
+  const t = useTranslations("Download");
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -30,18 +36,14 @@ const Download: React.FC = () => {
           rel="noopener noreferrer"
           id="download_button"
         >
-          <FiDownload id="icon" /> Baixar na Play Store
+          <FiDownload id="icon" /> {t("download_playstore")}
         </a>
       );
     } else if (isIOS) {
-      return <span id="soon">Em breve no seu dispositivo</span>;
+      return <span id="soon">{t("soon")}</span>;
     }
 
-    return (
-      <span id="not_supported">
-        No momento, o aplicativo não é suportado nesse aparelho. Veja as plataformas suportadas abaixo.
-      </span>
-    );
+    return <span id="not_supported">{t("unsupported")}</span>;
   };
 
   return (
@@ -52,7 +54,10 @@ const Download: React.FC = () => {
           name="description"
           content="Baixe agora o melhor aplicativo de conversas da internet. Comunique-se por texto e voz agora mesmo! Disponível para Android e em breve IOS."
         />
-        <meta name="og:title" content="Baixe o Saturn Chat e comece sua jornada" />
+        <meta
+          name="og:title"
+          content="Baixe o Saturn Chat e comece sua jornada"
+        />
         <meta
           name="og:description"
           content="Baixe agora o melhor aplicativo de conversas da internet. Comunique-se por texto e voz agora mesmo! Disponível para Android e em breve IOS."
@@ -63,11 +68,11 @@ const Download: React.FC = () => {
           <Header colorScheme="white" />
           <div className="content">
             <div id="content_wrapper">
-              <h1>Escolha seu dispositivo e comece agora a diversão.</h1>
-              <p>
-                Uma grande jornada te aguarda. Para isso, basta baixar o Saturn Chat em seu dispositivo.
-              </p>
-              <div className="download_button_container">{getDownloadButton()}</div>
+              <h1>{t("title")}</h1>
+              <p>{t("subtitle")}</p>
+              <div className="download_button_container">
+                {getDownloadButton()}
+              </div>
             </div>
             <div id="image_wrapper">
               <Image
@@ -98,7 +103,7 @@ const Download: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Baixar agora
+                  {t("download_now")}
                 </a>
               </div>
             </div>
@@ -114,7 +119,7 @@ const Download: React.FC = () => {
                 />
               </div>
               <div className="get_container">
-                <span id="soon">Em breve</span>
+                <span id="soon">{t("soon_2")}</span>
               </div>
             </div>
           </div>

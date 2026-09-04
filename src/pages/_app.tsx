@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     fr: "fr",
     es: "es",
   };
-  const locale = localeByRouterLocale[router.locale ?? ""] ?? "pt-BR";
+  const locale = localeByRouterLocale[router.locale ?? ""] ?? "en";
 
   const changeTheme = () => {
     const expression = currentTheme.title === "light" ? BlackTheme : LightTheme;

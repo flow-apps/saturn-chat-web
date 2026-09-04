@@ -27,5 +27,14 @@
     },
     "call_action": "Que tal começar agora?",
     "download": "Baixar agora"
+  },
+  "Download": {
+    "title": "Escolha seu dispositivo e comece agora a diversão",
+    "subtitle": "Uma grande jornada te aguarda. Para isso, basta baixar o Saturn Chat em seu dispositivo",
+    "unsupported": "No momento, o aplicativo não é suportado nesse aparelho. Veja as plataformas suportadas abaixo",
+    "soon": "Em breve no seu dispositivo",
+    "soon_2": "Em breve",
+    "download_playstore": "Baixar na Play Store",
+    "download_now": "Baixar agora"
   }
 }
